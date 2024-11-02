@@ -26,5 +26,7 @@
   : (Unit: mm)
 
 F-type: $(\sqrt{5}-1):1$
+
 P-type: $\sqrt{2}:1$
+
 M-type: $(\sqrt{5}+1):2$
