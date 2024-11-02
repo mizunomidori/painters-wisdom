@@ -39,8 +39,11 @@
 >
 
 Golden ratio: $\phi = (1 + \sqrt{5}) / 2$
+
 Silver ratio: $\delta = 1 + \sqrt{2}$
+
 $\Phi = (\sqrt{5} - 1) / 2 = 1 / \phi,$
+
 where $\Phi$ is golden ratio conjugate
 
 F-format: $(\sqrt{5}-1):1$
