@@ -25,8 +25,29 @@
 
   : (Unit: mm)
 
-F-type: $(\sqrt{5}-1):1$
 
-P-type: $\sqrt{2}:1$
+### the number of porte d’harmonie
 
-M-type: $(\sqrt{5}+1):2$
+キャンバスサイズは黄金比に従っていると言及されることがありますが、
+必ずしもそうではないようです（比率が一致するのは30%未満）。
+キャンバスサイズフォーマットは美的要因ではなく、織機の幅に最適化するなど
+経済的な要因で計算されていると指摘されています。
+
+> Dang, N. Dinh. “Standard canvas and stretcher sizes satisfying golden and silver ratios as well as optimal use of material.” arXiv: History and Overview (2015): n. pag.
+>
+> https://nguyendinhdang.wordpress.com/2015/08/07/standard-canvas-and-stretcher-sizes-satisfying-golden-and-silver-ratios-as-well-as-optimal-use-of-material/
+>
+
+Golden ratio: $\phi = (1 + \sqrt{5}) / 2$
+Silver ratio: $\delta = 1 + \sqrt{2}$
+$\Phi = (\sqrt{5} - 1) / 2 = 1 / \phi,$
+where $\Phi$ is golden ratio conjugate
+
+F-format: $(\sqrt{5}-1):1$
+$\rightarrow H = W / (\sqrt{5} - 1) = W \phi / 2 = W / 2 \Phi$
+
+P-format: $\sqrt{2}:1$
+$\rightarrow H = W /\sqrt{2} = W /(\delta - 1)$
+
+M-format: $(\sqrt{5}+1):2$
+$\rightarrow H = 2W / (\sqrt{5} + 1) = W / \phi$
