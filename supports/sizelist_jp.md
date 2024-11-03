@@ -52,6 +52,7 @@
 ### 日本規格
 日本規格はフランス規格をベースに尺寸単位に置換されたものです。
 尺貫法廃止により、さらにメートル法に換算されています。
+
 $1 \textsf{尺} = 10/33 \textsf{m} \simeq 30.3 \textsf{cm}$
 
 > Standard Canvas Sizes, Musashi Art & Design glossary, Musashi Art & Design University
