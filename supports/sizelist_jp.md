@@ -56,7 +56,6 @@
 $1 \textsf{尺} = 10/33 \textsf{m} \simeq 30.3 \textsf{cm}$
 
 > Standard Canvas Sizes, Musashi Art & Design glossary, Musashi Art & Design University
->
 > https://art-design-glossary.musabi.ac.jp/standard-canvas-sizes/
 >
 
@@ -67,7 +66,7 @@ $1 \textsf{尺} = 10/33 \textsf{m} \simeq 30.3 \textsf{cm}$
 キャンバスサイズフォーマットは美的要因ではなく、織機の幅に最適化するなど
 経済的な要因で計算されていると指摘されています。
 
-> Dang, N. Dinh. “Standard canvas and stretcher sizes satisfying golden and silver ratios as well as optimal use of material.” arXiv: History and Overview (2015): n. pag.
+> Dang, N. Dinh. “Standard canvas and stretcher sizes satisfying golden and silver ratios as well as optimal use of material.” arXiv: History and Overview (2015): n. pag. \
 > https://nguyendinhdang.wordpress.com/2015/08/07/standard-canvas-and-stretcher-sizes-satisfying-golden-and-silver-ratios-as-well-as-optimal-use-of-material/
 >
 

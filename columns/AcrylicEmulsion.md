@@ -4,12 +4,10 @@
 
 以下のサイトの要約です。
 
-> 小杉弘明氏, 画材のトリビア
->
-> エマルジョンと言う勿れ ②
-> https://gazaizukan.jp/trivia/columns?pid=5
->
-> エマルジョンと言う勿れ ③
+> 小杉弘明氏, 画材のトリビア \
+> エマルジョンと言う勿れ ② \
+> https://gazaizukan.jp/trivia/columns?pid=5 \
+> エマルジョンと言う勿れ ③ \
 > https://gazaizukan.jp/trivia/columns?pid=4
 
 
