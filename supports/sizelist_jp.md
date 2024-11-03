@@ -44,3 +44,40 @@
 | A10  |  26 × 37  | B10  |   32 × 45   |
 
   : (単位: mm)
+
+
+### 日本規格
+日本規格はフランス規格をベースに尺寸単位に置換されたものです。
+尺貫法廃止により、さらにメートル法に換算されています。
+$1 \textsf{尺} = 10/33 \textsf{m} \simeq 30.3 \textsf{cm}$
+
+> Standard Canvas Sizes, Musashi Art & Design glossary, Musashi Art & Design University
+> https://art-design-glossary.musabi.ac.jp/standard-canvas-sizes/
+>
+
+### 黄金比・白銀比
+
+キャンバスサイズは黄金比や白銀比に従っていると言及されることがありますが、
+必ずしもそうではないようです（比率が一致するのは30%未満）。
+キャンバスサイズフォーマットは美的要因ではなく、織機の幅に最適化するなど
+経済的な要因で計算されていると指摘されています。
+
+> Dang, N. Dinh. “Standard canvas and stretcher sizes satisfying golden and silver ratios as well as optimal use of material.” arXiv: History and Overview (2015): n. pag.
+> https://nguyendinhdang.wordpress.com/2015/08/07/standard-canvas-and-stretcher-sizes-satisfying-golden-and-silver-ratios-as-well-as-optimal-use-of-material/
+>
+
+$$
+\begin{align*}
+  &\text{Golden ratio: } \phi = (1 + \sqrt{5}) / 2 \\
+  &\text{Silver ratio: } \delta = 1 + \sqrt{2} \\
+  &\Phi = (\sqrt{5} - 1) / 2 = 1 / \phi, \\
+  &\text{where } \Phi \text{ is golden ratio conjugate.} \\\\
+  &\textsf{F-format: } (\sqrt{5}-1):1 \\
+  &\rightarrow H =  \frac{W}{\sqrt{5} - 1} = \frac{W}{2 \Phi} = \frac{W \phi}{2} \\
+  &\textsf{P-format: } \sqrt{2}:1 \\
+  &\rightarrow H = \frac{W}{\sqrt{2}} = \frac{W}{\delta - 1} \\
+  &\textsf{M-format: } (\sqrt{5}+1):2 \\
+  &\rightarrow H = \frac{2W}{\sqrt{5} + 1} = \frac{W}{\phi} \\
+  &\text{where } H \text{ is the shorter length and } W \text{ is the longer length.}
+\end{align*}
+$$
