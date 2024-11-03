@@ -56,6 +56,7 @@
 $1 \textsf{尺} = 10/33 \textsf{m} \simeq 30.3 \textsf{cm}$
 
 > Standard Canvas Sizes, Musashi Art & Design glossary, Musashi Art & Design University
+>
 > https://art-design-glossary.musabi.ac.jp/standard-canvas-sizes/
 >
 
