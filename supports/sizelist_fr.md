@@ -40,6 +40,7 @@
 
 黄金比 $\phi$ ・白銀比 $\delta$ は以下の式で表されます。
 $\Phi$は黄金比の共役です。
+
 $$
 \begin{align*}
   &\text{Golden ratio: } \phi = \frac{1 + \sqrt{5}}{2} \\
@@ -51,6 +52,7 @@ $$
 $$
 
 キャンバスサイズは上記の比を用いて以下のように表現されます。
+
 $$
 \begin{align*}
   &\textsf{F-format: } (\sqrt{5}-1):1 \\
