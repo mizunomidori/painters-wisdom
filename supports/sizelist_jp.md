@@ -1,4 +1,7 @@
-##### キャンバス木枠・パネル 規格サイズ
+##### キャンバス木枠・パネル 規格サイズ ![LastUpdate][badge]
+
+[badge]: https://img.shields.io/badge/Last_update-2024.11.3-blue
+
 
 | 号数 | 長辺 |    F |    P |    M |
 | :--: | ---: | ---: | ---: | ---: |

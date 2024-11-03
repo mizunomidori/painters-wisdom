@@ -1,4 +1,7 @@
-## Standard Canvas Sizes
+## Standard Canvas Sizes ![LastUpdate][badge]
+
+[badge]: https://img.shields.io/badge/Last_update-2024.11.3-blue
+
 
 | Numéro | Long side | F (Figure) | P (Paysage) | M (Marine) |
 | :----- | :-------- | :--------- | :---------- | :--------- |

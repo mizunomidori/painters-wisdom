@@ -1,4 +1,7 @@
-### The Zorn palette
+### The Zorn palette ![LastUpdate][badge]
+
+[badge]: https://img.shields.io/badge/Last_update-2024.11.3-blue
+
 スウェーデンの画家Anders Zornが使用した4色で構成されるパレットです。
 ポートレイトを描く際に効果的とされています。
 
