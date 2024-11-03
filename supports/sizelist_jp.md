@@ -66,14 +66,23 @@ $1 \textsf{尺} = 10/33 \textsf{m} \simeq 30.3 \textsf{cm}$
 > https://nguyendinhdang.wordpress.com/2015/08/07/standard-canvas-and-stretcher-sizes-satisfying-golden-and-silver-ratios-as-well-as-optimal-use-of-material/
 >
 
+黄金比 $\phi$ ・白銀比 $\delta$ は以下の式で表されます。
+$\Phi$は黄金比の共役です。
 $$
 \begin{align*}
-  &\text{Golden ratio: } \phi = (1 + \sqrt{5}) / 2 \\
+  &\text{Golden ratio: } \phi = \frac{1 + \sqrt{5}}{2} \\
   &\text{Silver ratio: } \delta = 1 + \sqrt{2} \\
-  &\Phi = (\sqrt{5} - 1) / 2 = 1 / \phi, \\
-  &\text{where } \Phi \text{ is golden ratio conjugate.} \\\\
+  &\Phi = \frac{\sqrt{5} - 1}{2} = \frac{1}{\phi}, \\
+  &\text{where } \Phi \text{ is golden ratio conjugate.} \\
+  &\because \Phi \cdot \phi = \frac{1 + \sqrt{5}}{2} \cdot \frac{\sqrt{5} - 1}{2} = \frac{(1 + \sqrt{5}) \cdot (\sqrt{5} - 1)}{4} = 1
+\end{align*}
+$$
+
+キャンバスサイズは上記の比を用いて以下のように表現されます。
+$$
+\begin{align*}
   &\textsf{F-format: } (\sqrt{5}-1):1 \\
-  &\rightarrow H =  \frac{W}{\sqrt{5} - 1} = \frac{W}{2 \Phi} = \frac{W \phi}{2} \\
+  &\rightarrow H = \frac{W}{\sqrt{5} - 1} = \frac{W}{2 \Phi} = \frac{W \cdot \phi}{2} \\
   &\textsf{P-format: } \sqrt{2}:1 \\
   &\rightarrow H = \frac{W}{\sqrt{2}} = \frac{W}{\delta - 1} \\
   &\textsf{M-format: } (\sqrt{5}+1):2 \\
@@ -81,3 +90,8 @@ $$
   &\text{where } H \text{ is the shorter length and } W \text{ is the longer length.}
 \end{align*}
 $$
+
+ただし、この比率にフィットするのは、以下のサイズのみとのことです。
+- F-format: F3, F6, F12, F25, F40, F100, F150
+- P-format: P3, P8, P30, P50, P100, P150, P200
+- M-format: M5, M12, M50, M60, M80, M200, M300
