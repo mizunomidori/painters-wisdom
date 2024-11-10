@@ -53,7 +53,7 @@ title: "canvas size jp"
 
 
 ### 日本規格
-日本規格はフランス規格をベースに尺寸単位に置換されたものです。
+　日本規格はフランス規格をベースに尺寸単位に置換されたものです。
 尺貫法廃止により、さらにメートル法に換算されています。
 
 $1 \textsf{尺} = 10/33 \textsf{m} \simeq 30.3 \textsf{cm}$
@@ -64,7 +64,7 @@ $1 \textsf{尺} = 10/33 \textsf{m} \simeq 30.3 \textsf{cm}$
 
 ### 黄金比・白銀比
 
-キャンバスサイズは黄金比や白銀比に従っていると言及されることがありますが、
+　キャンバスサイズは黄金比や白銀比に従っていると言及されることがありますが、
 必ずしもそうではないようです（比率が一致するのは30%未満）。
 キャンバスサイズフォーマットは美的要因ではなく、織機の幅に最適化するなど
 経済的な要因で計算されていると指摘されています。
@@ -73,7 +73,7 @@ $1 \textsf{尺} = 10/33 \textsf{m} \simeq 30.3 \textsf{cm}$
 > https://nguyendinhdang.wordpress.com/2015/08/07/standard-canvas-and-stretcher-sizes-satisfying-golden-and-silver-ratios-as-well-as-optimal-use-of-material/
 >
 
-黄金比 $\phi$ ・白銀比 $\delta$ は以下の式で表されます。
+　黄金比 $\phi$ ・白銀比 $\delta$ は以下の式で表されます。
 $\Phi$は黄金比の共役です。
 
 $$
@@ -86,7 +86,7 @@ $$
 \end{align*}
 $$
 
-キャンバスサイズは上記の比を用いて以下のように表現されます。
+　キャンバスサイズは上記の比を用いて以下のように表現されます。
 
 $$
 \begin{align*}
