@@ -6,13 +6,13 @@ import { createPageData, getPostData, getTagsData } from "@/lib/posts";
 import Pagination from "../../../components/Pagination";
 
 interface Props {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata(
     { params }: Props,
 ): Promise<Metadata> {
-  const { slug } = await params;
+  const slug = (await params).slug;
   const tag = decodeURIComponent(slug);
   return {
     title: `${tag} | Artists' wisdom`,
@@ -43,8 +43,8 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default async function TagPage({ params }: { params: { slug: string } }) {
-  const { slug } = await params;
+export default async function TagPage({ params }: Props) {
+  const slug = (await params).slug;
   const posts = await getTagsData(slug);
   const pageData: PageData = createPageData(
     1,

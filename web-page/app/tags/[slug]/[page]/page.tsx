@@ -10,10 +10,10 @@ import {
 import Pagination from "../../../../components/Pagination";
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
     page: number
-  };
+  }>;
 };
 
 export async function generateMetadata(
@@ -65,11 +65,7 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default async function TagPage({
-  params,
-}: {
-  params: { slug: string; page: number };
-}) {
+export default async function TagPage({ params }: Props) {
   const { slug, page } = await params;
   const posts = await getTagsData(slug);
 

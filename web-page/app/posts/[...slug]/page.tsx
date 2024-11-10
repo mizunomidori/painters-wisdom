@@ -9,13 +9,13 @@ import { createPostItem } from "@/lib/markdown";
 import { getPostData } from "@/lib/posts";
 
 type Props = {
-  params: { slug: string[] }
+  params: Promise<{ slug: string[] }>
 };
 
 export async function generateMetadata(
   { params }: Props,
 ): Promise<Metadata> {
-  const { slug } = await params;
+  const slug = (await params).slug;
   const post = await createPostItem(slug);
   return {
     title: `${post.title} | Artists' wisdom`,
@@ -36,7 +36,7 @@ export async function generateStaticParams() {
 }
 
 export default async function Post({ params }: Props) {
-  const { slug } = await params;
+  const slug = (await params).slug;
   const postData = await createPostItem(slug);
 
   return (

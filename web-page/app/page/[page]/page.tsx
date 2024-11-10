@@ -6,13 +6,13 @@ import type { PageData } from "@/types";
 import { createPageData, getPostData } from "@/lib/posts";
 
 type Props = {
-  params: { page: number };
+  params: Promise<{ page: number }>;
 };
 
 export async function generateMetadata(
   { params }: Props,
 ): Promise<Metadata> {
-  const { page } = await params;
+  const page = (await params).page;
   const title = `pp. ${page}`;
   return {
     title: `${title} | Artists' wisdom`,
@@ -36,10 +36,10 @@ export async function generateStaticParams() {
   return pages;
 }
 
-export default async function Page({ params }: { params: { page: number } }) {
+export default async function Page({ params }: Props) {
   const posts = await getPostData();
 
-  const { page } = await params;
+  const page = (await params).page;
   const pageData: PageData = createPageData(page, posts.length);
 
   return (
