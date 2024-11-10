@@ -1,9 +1,7 @@
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
 import React from "react";
 import { PostItem } from "@/types";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 
 // https://github.com/orgs/mdx-js/discussions/2345
 import 'katex/dist/katex.min.css';
@@ -16,7 +14,6 @@ type Props = {
 
 export async function generateMetadata(
   { params }: Props,
-  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { slug } = await params;
   const post = await createPostItem(slug);
@@ -27,8 +24,8 @@ export async function generateMetadata(
 
 // 静的ルートの作成
 export async function generateStaticParams() {
-  const postsDirectory = path.join(process.cwd(), "posts");
-  const filenames = fs.readdirSync(postsDirectory);
+  // const postsDirectory = path.join(process.cwd(), "posts");
+  // const filenames = fs.readdirSync(postsDirectory);
   const posts = await getPostData();
   return posts.map((post: PostItem) => {
     return {

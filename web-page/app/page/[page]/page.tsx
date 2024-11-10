@@ -1,6 +1,6 @@
 import PostCard from "../../../components/PostCard";
 import Pagination from "../../../components/Pagination";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import { POSTS_PER_PAGE } from "@/constants";
 import type { PageData } from "@/types";
 import { createPageData, getPostData } from "@/lib/posts";
@@ -11,7 +11,6 @@ type Props = {
 
 export async function generateMetadata(
   { params }: Props,
-  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { page } = await params;
   const title = `pp. ${page}`;
