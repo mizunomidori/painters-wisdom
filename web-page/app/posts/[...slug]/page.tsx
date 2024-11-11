@@ -42,21 +42,25 @@ export default async function Post({ params }: Props) {
   return (
     <div className="w-full flex justify-center">
       <div className="max-w-none mx-4 my-8">
-        <h1 className="h2">{postData?.title}</h1>
-        <time>{postData?.date}</time>
-        <div className="space-x-2">
-          {postData?.tags &&
-            postData.tags?.map((category) => (
-              <span key={category} className="badge bg-secondary">
-                <Link href={`/tags/${category}`}>{category}</Link>
-              </span>
-            ))}
-        </div>
+        {/* <h1 className="h2">{postData?.title}</h1>
+        <time>{postData?.date}</time> */}
         <div className="row">
           <article
             className={"markdown-content prose dark:prose-invert col-md-12"}
             dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
           ></article>
+        </div>
+
+        <div className="space-x-2 my-8 border-t">
+          <div className="my-4">
+            <span>Tags: </span>
+              {postData?.tags &&
+                postData.tags?.map((category) => (
+                  <span key={category} className="badge bg-secondary">
+                    <Link href={`/tags/${category}`}>{category}</Link>
+                  </span>
+              ))}
+          </div>
         </div>
       </div>
     </div>
