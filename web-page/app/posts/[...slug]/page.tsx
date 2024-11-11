@@ -29,7 +29,7 @@ export async function generateStaticParams() {
   const posts = await getPostData();
   return posts.map((post: PostItem) => {
     return {
-      path: `/painters-wisdom/posts/${post.slug.join('/')}`,
+      path: `/posts/${post.slug.join('/')}`,
       slug: post.slug,
     };
   });
@@ -48,7 +48,7 @@ export default async function Post({ params }: Props) {
           {postData?.tags &&
             postData.tags?.map((category) => (
               <span key={category} className="badge bg-secondary">
-                <Link href={`/painters-wisdom/tags/${category}`}>{category}</Link>
+                <Link href={`/tags/${category}`}>{category}</Link>
               </span>
             ))}
         </div>
