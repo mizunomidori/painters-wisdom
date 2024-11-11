@@ -8,7 +8,7 @@ export default async function Home() {
   const pageData: PageData = createPageData(1, posts.length);
 
   return (
-    <div className="container w-full h-full overflow-hidden flex justify-center">
+    <div className="container w-full h-full flex justify-center">
       <div className="prose dark:prose-invert md:max-w-3xl w-2/3 m-2">
         <div>
           <h1>Artists&apos; wisdom</h1>

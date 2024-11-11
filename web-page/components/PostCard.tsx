@@ -4,7 +4,7 @@ import { PostItem } from "@/types";
 const PostCard = ({ post }: { post: PostItem }) => {
   return (
     <Link
-      href={`/posts/${post.slug.join('/')}`}
+      href={`/painters-wisdom/posts/${post.slug.join('/')}`}
       className="align-self-baseline col-lg-4 d-flex flex-column justify-content-between scale-95 hover:scale-100 ease-in duration-100"
     >
       <div className="bg-gray-200 dark:bg-gray-800">

@@ -29,7 +29,7 @@ const Pagination = ({ type, pages, currentPage = 1 }: PageProps) => {
       {startPage > 1 && (
         <>
           <li className="page-item">
-            <Link href={`/${type}/1`} className="page-link">
+            <Link href={`/painters-wisdom/${type}/1`} className="page-link">
               1
             </Link>
           </li>
@@ -43,7 +43,7 @@ const Pagination = ({ type, pages, currentPage = 1 }: PageProps) => {
       {paginationRange.map((page) => (
         <li className="page-item" key={page}>
           <Link
-            href={`/${type}/${page}`}
+            href={`/painters-wisdom/${type}/${page}`}
             className={`page-link ${currentPage == page ? "active" : ""}`}
           >
             {page}
@@ -58,7 +58,7 @@ const Pagination = ({ type, pages, currentPage = 1 }: PageProps) => {
             </li>
           )}
           <li className="page-item">
-            <Link href={`/${type}/${totalPages}`} className="page-link">
+            <Link href={`/painters-wisdom/${type}/${totalPages}`} className="page-link">
               {totalPages}
             </Link>
           </li>
