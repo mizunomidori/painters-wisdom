@@ -1,7 +1,7 @@
 ---
 date: "2024-11-03"
 tags: ["columns"]
-title: "Zorn palatte"
+title: "The zorn palatte"
 ---
 
 ### The Zorn palette

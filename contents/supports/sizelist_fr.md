@@ -1,7 +1,7 @@
 ---
 date: "2024-11-03"
 tags: ["supports"]
-title: "canvas size fr"
+title: "Canvas size list [fr]"
 ---
 
 ## Standard Canvas Sizes
