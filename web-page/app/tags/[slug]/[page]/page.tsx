@@ -1,4 +1,4 @@
-import PostCard from "../../../../components/PostCard";
+
 import { PostItem } from "@/types";
 import { Metadata } from "next";
 import type { PageData } from "@/types";
@@ -7,7 +7,7 @@ import {
   getPostData,
   getTagsData,
 } from "@/lib/posts";
-import Pagination from "../../../../components/Pagination";
+import TagSummary from "@/components/TagSummary";
 
 type Props = {
   params: Promise<{
@@ -72,21 +72,6 @@ export default async function TagPage({ params }: Props) {
   const pageData: PageData = createPageData(page, posts.length);
 
   return (
-    <>
-      <div className="my-8">
-        <div className="row">
-          {posts.slice(pageData.start, pageData.end).map((post) => (
-            <PostCard key={post.title} post={post} />
-          ))}
-        </div>
-        <div className="mb-3">
-          <Pagination
-            type={`tags/${slug}`}
-            pages={pageData.pages}
-            currentPage={pageData.currentPage}
-          />
-        </div>
-      </div>
-    </>
+    <TagSummary slug={slug} posts={posts} pageData={pageData} />
   );
 }
