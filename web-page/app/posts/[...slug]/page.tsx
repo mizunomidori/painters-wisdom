@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { PostItem } from "@/types";
+import type { PostItem } from "@/types";
 import { Metadata } from "next";
 
 // https://github.com/orgs/mdx-js/discussions/2345

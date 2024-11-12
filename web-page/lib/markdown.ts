@@ -11,7 +11,7 @@ import rehypeExternalLinks from 'rehype-external-links';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import matter from 'gray-matter';
-import { PostItem } from '@/types';
+import type { PostItem } from '@/types';
 
 const contentsDirectory = path.join(process.cwd(), 'contents');
 
