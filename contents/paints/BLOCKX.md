@@ -10,6 +10,7 @@ title: "Blockx paints"
 
 [https://blockx.be/en/extra-fine-oils/](https://blockx.be/en/extra-fine-oils/)
 
+### All colors
 
 | ID        | Color                      | Pigment index      | Transparence     | Price series |
 | :-------- | :------------------------- | :----------------- | :--------------- | :----------: |
@@ -114,3 +115,15 @@ title: "Blockx paints"
 | 212512BXC | Nickel Yellow              | PY53               | Opaque           |      5       |
 | 212213BXC | Brilliant Yellow Light     | PW4 PY37           | Opaque           |      3       |
 | 212562BXC | Golden Green               | PY154 PG36         | Transparent      |      4       |
+
+### Prices
+
+| Series |         20ml |
+| :----: | -----------: |
+|   1    | $\yen$ 1,815 |
+|   2    |        1,980 |
+|   3    |        2,255 |
+|   4    |        2,585 |
+|   5    |        3,355 |
+|   6    |        4,345 |
+|   7    |        6,545 |

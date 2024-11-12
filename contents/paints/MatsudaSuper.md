@@ -10,6 +10,7 @@ title: "Matsuda Super paints"
 
 [http://www.matsuda-colour.co.jp/product/superoilcolor.html](http://www.matsuda-colour.co.jp/product/superoilcolor.html)
 
+## All colors
 
 | REF-No. | Color                        | Pigment index  | Fastness | Transparence | Price series |
 | :------ | :--------------------------- | :------------- | :------- | :----------: | :----------: |
@@ -114,3 +115,21 @@ title: "Matsuda Super paints"
 | 1807    | グレーオブグレー             | PW1,PBk9       | ★★★   |    不透明    | A            |
 | 1808    | ベールコンポーゼNo.1         | PG18,PY40      | ★★★   |    半透明    | D            |
 | 1809    | ベールコンポーゼNo.2         | PG18,PY40,PW4  | ★★★   |    不透明    | B            |
+
+### Prices
+
+| Series |       20ml |  40ml |
+| :----: | ---------: | ----: |
+|   A    | $\yen$ 700 | 1,250 |
+|   B    |        850 | 1,550 |
+|   C    |      1,150 | 2,100 |
+|   D    |      1,400 | 2,550 |
+|   E    |      1,800 | 3,250 |
+|   F    |      2,400 | 4,350 |
+|   G    |      2,900 | 5,250 |
+|   H    |      4,000 | 7,200 |
+
+|      Series       |         50ml | 110ml | 330ml |
+| :---------------: | -----------: | ----: | ----: |
+| W (Zinc/Titanium) | $\yen$ 1,200 | 2,250 | 5,200 |
+|    W1 (Silver)    |        1,400 | 2,600 |     - |

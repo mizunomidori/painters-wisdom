@@ -9,7 +9,7 @@ const PostList = async ({ posts, pageData }: { posts: PostItem[], pageData: Page
         <div>
           <h1>Painters&apos; wisdom</h1>
         </div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-2">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-3">
           {posts.slice(pageData.start, pageData.end).map((post) => (
             <PostCard key={post.slug.join('/')} post={post} />
           ))}
