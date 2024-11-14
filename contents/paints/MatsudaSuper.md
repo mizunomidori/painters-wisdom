@@ -10,7 +10,7 @@ title: "Matsuda Super paints"
 
 [http://www.matsuda-colour.co.jp/product/superoilcolor.html](http://www.matsuda-colour.co.jp/product/superoilcolor.html)
 
-## All colors
+### All colors
 
 | REF-No. | Color                        | Pigment index  | Fastness | Transparence | Price series |
 | :------ | :--------------------------- | :------------- | :------- | :----------: | :----------: |
