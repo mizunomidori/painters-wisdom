@@ -1,6 +1,6 @@
 ---
 date: "2024-11-15"
-tags: ["columns"]
+tags: ["maniela", "supports"]
 title: "The chalk ground"
 ---
 

@@ -1,6 +1,6 @@
 ---
 date: "2024-11-02"
-tags: ["paints"]
+tags: ["paints", "pricelists"]
 title: "Blockx paints"
 ---
 
