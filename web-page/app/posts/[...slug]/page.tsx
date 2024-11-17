@@ -52,7 +52,7 @@ export default async function Post({ params }: Props) {
         </div>
 
         <div className="space-x-2 my-8 border-t">
-          <div className="my-4">
+          <div className="my-4 flex flex-row gap-3">
             <span>Tags: </span>
               {postData?.tags &&
                 postData.tags?.map((category) => (
