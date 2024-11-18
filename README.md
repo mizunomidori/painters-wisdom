@@ -22,7 +22,7 @@ painters-wisdom
 ```
 
 ### To add contents
-Just upload markdown file to "contents" directory.
+Just upload markdown files to "contents" directory.
 
 1. Upload articles (.md) in the "contents" directory
 2. (Automatically) Copy "contents" to "web-page/posts"
