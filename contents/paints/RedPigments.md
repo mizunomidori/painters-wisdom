@@ -1,7 +1,7 @@
 ---
 date: "2024-11-18"
-tags: ["paints"]
-title: "Oil paints: Red colors"
+tags: ["pigments"]
+title: "Pigments: Red colors"
 ---
 
 ## Historical pigments

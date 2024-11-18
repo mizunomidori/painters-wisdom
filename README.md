@@ -9,7 +9,7 @@ Your participations are welcome :satisfied:
 ```md
 painters-wisdom
 ├── README.md ... This file
-├── contents ... articles (markdown files)
+├── contents ... Articles (markdown files)
 │   ├── <category-1>
 │   │   ├── article-A.md
 │   │   ├── article-B.md
