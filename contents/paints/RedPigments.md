@@ -20,7 +20,7 @@ title: "Pigments: Red colors"
 　辰砂（Cinnabar）は硫化水銀（HgS）からなる鉱物です。
 中国の辰州から多く産出したことから辰砂と呼ばれます。
 
-他の言語では以下のように表記されます。
+　他の言語では以下のように表記されます。
 - ギリシャ語: κιννάβαρι (kinnabari)
 - ラテン語: *cinnabaris*
 - ペルシア語: شنگرف (shangarf)
@@ -53,8 +53,21 @@ title: "Pigments: Red colors"
 | クサカベ GEM油絵具              |  90g | 辰砂     |
 
 
+## Cadmium Red
+カドミウムレッドは硫化カドミウム（CdS）とセレン化カドミウム（CdSe）の割合で色味が変わります。[^3]
+
+| Color                       | CdS | CdSe |
+| :-------------------------- | --: | :--- |
+| Cadmium Orange              | 82% | 18%  |
+| Cadmium Red Light           | 70% | 30%  |
+| Cadmium Red Middle          | 60% | 40%  |
+| Cadmium Red Maroon (Purple) | 50% | 50%  |
+
 [^1]: Cinabre, Wikipediaフランス語版
     https://fr.wikipedia.org/wiki/Cinabre
 
 [^2]: Vermillon, Wikipediaフランス語版
     https://fr.wikipedia.org/wiki/Vermillon
+
+[^3]: pigment, X
+    https://x.com/5duaPJFuJ11zjJq/status/1569453300487004160
