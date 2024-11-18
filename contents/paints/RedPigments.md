@@ -66,10 +66,11 @@ title: "Pigments: Red colors"
 
 ## Alizarin Crimson (PR83)
 　JUST PAINT - "Alizarin Crimson: Now You See It…."の要約です。
+
 　Alizarin Crimsonは耐光性の問題が知られています。
 事実として、ASTM I$\hspace{-1.2pt}$I$\hspace{-1.2pt}$I のFairという耐光性の評価では、薄めたりグレーズとして使用する場合、色褪せのリスクが存在するとされています。
 それにもかかわらず、多くのアーティストがこの色に惹かれ続けています。
-代替色として、Pyrrole Red Rubine (PR264)、Quinacridone Magenta (PR122)が挙げられますが、高彩度すぎると感じるため、完璧な代替品とはみなされないことがあります。
+代替色として、Pyrrole Red Rubine (PR264)、Quinacridone Magenta (PR122)などが挙げられますが、時節きれいすぎる、高彩度すぎると感じるため、完璧な代替品とはみなされないことがあります。
 そのため、多くのメーカーで現在もラインナップにこの色を提供し続けています。
 
 　ASTMのLight fastness（耐光性）はチント（薄めた色）の性能に基づいており、マストーンの性能は考慮されていません。
