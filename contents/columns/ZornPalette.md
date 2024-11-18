@@ -6,7 +6,7 @@ title: "The zorn palatte"
 
 ### The Zorn palette
 
-　スウェーデンの画家Anders Zornが使用した4色で構成されるパレットです。
+　ソーンパレットは、スウェーデンの画家Anders Zornが使用した4色で構成されるパレットです。
 ポートレイトを描く際に効果的とされています。
 
 > Anders Zorn, Self Portrait With Model, 1896
