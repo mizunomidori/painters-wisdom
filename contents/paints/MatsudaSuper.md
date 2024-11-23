@@ -1,6 +1,6 @@
 ---
 date: "2024-11-02"
-tags: ["paints", "pricelists"]
+tags: ["paints", "price-lists"]
 title: "Matsuda Super paints"
 ---
 
