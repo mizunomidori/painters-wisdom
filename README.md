@@ -1,33 +1,56 @@
-## Painters' Wisdom
+# Painters' Wisdom
 
-Feel free to make any changes or additions to this repository :art:
-Your participations are welcome :satisfied:
+Painters' Wisdom is a quiet, searchable archive of practical notes about
+pigments, painting surfaces, materials, and studio practice.
 
+Articles are Markdown files in `contents/`. The Next.js application in
+`web-page/` reads them directly and exports the site as static HTML for GitHub
+Pages.
 
-## Information for participants
+## Project Layout
 
-```md
-painters-wisdom
-├── README.md ... This file
-├── contents ... Articles (markdown files)
-│   ├── <category-1>
-│   │   ├── article-A.md
-│   │   ├── article-B.md
-│   │   └── ...
-│   ├── <category-2>
-│   │   ├── article-C.md
-│   │   └── ...
-│   └── ...
-└── web-page ... Frontend using Next.js
+```text
+painters-wisdom/
+├── contents/        Markdown articles grouped by category
+├── web-page/        Next.js application
+└── README.md
 ```
 
-### To add contents
-Just upload markdown files to "contents" directory.
+## Local Development
 
-1. Upload articles (.md) in the "contents" directory
-2. (Automatically) Copy "contents" to "web-page/posts"
-3. (Automatically) Build the next.js application
-4. Access Github pages
+```bash
+cd web-page
+npm ci
+npm run dev
+```
 
-### To change next app
-Any changes are welcome.
+Open [http://localhost:3000/painters-wisdom](http://localhost:3000/painters-wisdom).
+The `/painters-wisdom` path is required because it matches the GitHub Pages
+deployment base path.
+
+## Commands
+
+Run these from `web-page/`:
+
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run lint` | Check the application with ESLint |
+| `npm run build` | Build and statically export the site |
+| `npm run start` | Serve a production build locally |
+
+## Adding Articles
+
+1. Add a `.md` file under `contents/columns/`, `contents/paints/`, or
+	`contents/supports/`.
+2. Include front matter with at least `title` and `date`. Add `tags` when
+	appropriate.
+3. Run `npm run build` from `web-page/` to verify the new route.
+
+The article URL follows its path under `contents/`, for example:
+`contents/paints/Example.md` becomes `/posts/paints/Example`.
+
+## Deployment
+
+The app uses Next.js static export and is configured for the GitHub Pages
+base path `/painters-wisdom`.

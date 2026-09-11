@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Painters' Wisdom Web App
+
+This directory contains the Next.js frontend for Painters' Wisdom. It uses the
+App Router, Tailwind CSS, and static export. Article source files live one
+directory above this app in `../contents/`.
 
 ## Getting Started
 
-First, run the development server:
+From this directory:
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000/painters-wisdom](http://localhost:3000/painters-wisdom).
+The base path is configured in `next.config.ts`, so the root URL
+`http://localhost:3000/` intentionally returns 404.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev      # Start the development server
+npm run lint     # Run ESLint
+npm run build    # Build and statically export the site
+npm run start    # Serve the production build
+```
 
-## Learn More
+## Content
 
-To learn more about Next.js, take a look at the following resources:
+The app reads Markdown files from `../contents/` during the build. Supported
+content groups are:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `columns/`
+- `paints/`
+- `supports/`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Each article should provide front matter such as:
 
-## Deploy on Vercel
+```yaml
+---
+title: Example article
+date: 2024-11-01
+tags:
+  - paints
+---
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See the repository [README](../README.md) for the project overview and article
+workflow.

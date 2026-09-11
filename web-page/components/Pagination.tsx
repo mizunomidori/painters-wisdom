@@ -25,17 +25,17 @@ const Pagination = ({ type, pages, currentPage = 1 }: PageProps) => {
   }
 
   return (
-    <ul className="flex flex-row gap-3 list-none justify-center">
+    <ul className="flex list-none flex-row justify-center gap-2">
       {startPage > 1 && (
         <>
           <li className="page-item">
-            <Link href={`/${type}/1`} className="page-link">
+            <Link href={`/${type}/1`} className="pagination-link">
               1
             </Link>
           </li>
           {startPage > 2 && (
             <li className="page-item disabled">
-              <span className="page-link">...</span>
+              <span className="pagination-link">...</span>
             </li>
           )}
         </>
@@ -44,7 +44,7 @@ const Pagination = ({ type, pages, currentPage = 1 }: PageProps) => {
         <li className="page-item" key={page}>
           <Link
             href={`/${type}/${page}`}
-            className={`page-link ${currentPage == page ? "active" : ""}`}
+            className={`pagination-link ${currentPage === page ? "active" : ""}`}
           >
             {page}
           </Link>
@@ -54,11 +54,11 @@ const Pagination = ({ type, pages, currentPage = 1 }: PageProps) => {
         <>
           {endPage < totalPages - 1 && (
             <li className="page-item disabled">
-              <span className="page-link">...</span>
+              <span className="pagination-link">...</span>
             </li>
           )}
           <li className="page-item">
-            <Link href={`/${type}/${totalPages}`} className="page-link">
+            <Link href={`/${type}/${totalPages}`} className="pagination-link">
               {totalPages}
             </Link>
           </li>

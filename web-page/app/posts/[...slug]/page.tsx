@@ -40,29 +40,31 @@ export default async function Post({ params }: Props) {
   const postData = await createPostItem(slug);
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="max-w-none mx-4 my-8">
-        {/* <h1 className="h2">{postData?.title}</h1>
-        <time>{postData?.date}</time> */}
-        <div className="row">
-          <article
-            className={"markdown-content prose dark:prose-invert col-md-12"}
-            dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-          ></article>
+    <div className="site-shell min-h-screen">
+      <header className="site-header">
+        <div className="site-header-inner">
+          <Link href="/" className="brand-mark">Painters&apos; wisdom</Link>
+          <span className="header-note">Field note</span>
         </div>
-
-        <div className="space-x-2 my-8 border-t">
-          <div className="my-4 flex flex-row gap-3">
-            <span>Tags: </span>
-              {postData?.tags &&
-                postData.tags?.map((category) => (
-                  <span key={category} className="badge bg-secondary">
-                    <Link href={`/tags/${category}`}>{category}</Link>
-                  </span>
-              ))}
-          </div>
+      </header>
+      <main className="article-frame">
+        <div className="mb-10">
+          <span className="eyebrow">{postData.date}</span>
+          <h1 className="mt-3 text-4xl font-bold tracking-tight text-[var(--foreground)]">{postData.title}</h1>
         </div>
-      </div>
+        <article
+          className="article-content prose prose-lg max-w-none prose-invert"
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
+        <div className="article-tags">
+          <span className="eyebrow mr-2 self-center">Filed under</span>
+          {postData.tags?.map((category) => (
+            <Link key={category} href={`/tags/${encodeURIComponent(category)}`} className="article-tag">
+              {category}
+            </Link>
+          ))}
+        </div>
+      </main>
     </div>
   );
 }

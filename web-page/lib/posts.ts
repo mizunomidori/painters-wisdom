@@ -27,14 +27,13 @@ const readSubDirSync = (directoryPath: string) => {
 
 // すべてのposts内データを取得
 export const getPostData = async (): Promise<PostItem[]> => {
-  const postsDirectory = path.join(process.cwd(), "posts");
+  const postsDirectory = path.join(process.cwd(), "..", "contents");
   const filePaths = readSubDirSync(postsDirectory);
   const posts = filePaths
     .map((filePath) => {
-      console.log(filePath);
       const fileContents = fs.readFileSync(filePath, "utf-8");
       const { data } = matter(fileContents);
-      const filename = filePath.substring(filePath.lastIndexOf('posts/') + 6);
+      const filename = path.relative(postsDirectory, filePath);
 
       return {
         slug: filename.replace(/\.md$/, "").split('/'),

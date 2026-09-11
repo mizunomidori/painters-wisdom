@@ -4,19 +4,27 @@ import PostCard from "./PostCard";
 
 const PostList = async ({ posts, pageData }: { posts: PostItem[], pageData: PageData }) => {
   return (
-    <div className="w-full flex justify-center">
-      <div className="container prose dark:prose-invert md:max-w-3xl m-2 flex-1">
-        <div>
-          <h1>Painters&apos; wisdom</h1>
+    <div className="site-shell w-full">
+      <header className="site-header">
+        <div className="site-header-inner">
+          <span className="brand-mark">Painters&apos; wisdom</span>
+          <span className="header-note">An archive of materials &amp; practice</span>
         </div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-3">
+      </header>
+      <main className="container mx-auto max-w-6xl px-6 pb-12">
+        <div className="page-intro">
+          <span className="eyebrow">Field notes / 01</span>
+          <h1>For the work<br />in front of you.</h1>
+          <p>Practical knowledge about pigments, surfaces, and the patient craft of painting.</p>
+        </div>
+        <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
           {posts.slice(pageData.start, pageData.end).map((post) => (
             <PostCard key={post.slug.join('/')} post={post} />
           ))}
         </div>
         {
           pageData.totalPages > 1 && (
-            <div className="mb-3 flex justify-center">
+            <div className="mt-12 flex justify-center">
               <Pagination
                 type="page"
                 pages={pageData.pages}
@@ -25,7 +33,7 @@ const PostList = async ({ posts, pageData }: { posts: PostItem[], pageData: Page
             </div>
           )
         }
-      </div>
+      </main>
     </div>
   );
 }

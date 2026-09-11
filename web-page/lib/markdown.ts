@@ -13,10 +13,10 @@ import remarkMath from 'remark-math';
 import matter from 'gray-matter';
 import type { PostItem } from '@/types';
 
-const contentsDirectory = path.join(process.cwd(), 'contents');
+const contentsDirectory = path.join(process.cwd(), '..', 'contents');
 
 export async function createPostItem(slug: string[]): Promise<PostItem> {
-  const filePath = path.join(process.cwd(), "posts", `${slug.join('/')}.md`);
+  const filePath = path.join(contentsDirectory, `${slug.join('/')}.md`);
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContents);
 
