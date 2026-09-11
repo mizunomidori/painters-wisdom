@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 import { POSTS_PER_PAGE } from "@/constants";
-import type { PageData } from "@/types";
-import { createPageData, getPostData } from "@/lib/posts";
-import PostList from "@/components/PostList";
+import { getPostData } from "@/lib/posts";
+import PostListPage from "@/features/posts/components/server/PostListPage";
 
 type Props = {
   params: Promise<{ page: number }>;
@@ -36,12 +35,6 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: Props) {
-  const posts = await getPostData();
-
   const page = (await params).page;
-  const pageData: PageData = createPageData(page, posts.length);
-
-  return (
-    <PostList posts={posts} pageData={pageData} />
-  );
+  return <PostListPage currentPage={page} />;
 }

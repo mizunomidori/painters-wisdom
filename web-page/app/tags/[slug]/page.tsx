@@ -1,8 +1,7 @@
 import { PostItem } from "@/types";
 import { Metadata } from "next";
-import type { PageData } from "@/types";
-import { createPageData, getPostData, getTagsData } from "@/lib/posts";
-import TagSummary from "@/components/TagSummary";
+import { getPostData } from "@/lib/posts";
+import TagListPage from "@/features/tags/components/server/TagListPage";
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -44,13 +43,5 @@ export async function generateStaticParams() {
 
 export default async function TagPage({ params }: Props) {
   const slug = (await params).slug;
-  const posts = await getTagsData(slug);
-  const pageData: PageData = createPageData(
-    1,
-    posts.length
-  );
-
-  return (
-    <TagSummary slug={slug} posts={posts} pageData={pageData} />
-  );
+  return <TagListPage slug={slug} />;
 }
