@@ -14,9 +14,9 @@ export default async function PostArticlePage({ slug }: { slug: string[] }) {
         </div>
       </header>
       <main className="article-frame">
-        <div className="mb-10">
+        <div className="article-header">
           <span className="eyebrow">{postData.date}</span>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-[var(--foreground)]">{postData.title}</h1>
+          <h1 className="article-title">{postData.title}</h1>
         </div>
         <MermaidRenderer html={postData.contentHtml} />
         <div className="article-tags">
