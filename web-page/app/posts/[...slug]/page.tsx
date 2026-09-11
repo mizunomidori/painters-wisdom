@@ -7,6 +7,7 @@ import { Metadata } from "next";
 import 'katex/dist/katex.min.css';
 import { createPostItem } from "@/lib/markdown";
 import { getPostData } from "@/lib/posts";
+import MermaidRenderer from "@/components/MermaidRenderer";
 
 type Props = {
   params: Promise<{ slug: string[] }>
@@ -52,10 +53,7 @@ export default async function Post({ params }: Props) {
           <span className="eyebrow">{postData.date}</span>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-[var(--foreground)]">{postData.title}</h1>
         </div>
-        <article
-          className="article-content prose prose-lg max-w-none prose-invert"
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-        />
+        <MermaidRenderer html={postData.contentHtml} />
         <div className="article-tags">
           <span className="eyebrow mr-2 self-center">Filed under</span>
           {postData.tags?.map((category) => (

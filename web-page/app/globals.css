@@ -186,6 +186,146 @@ a {
   color: var(--accent-bright);
 }
 
+.history-timeline {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0 3rem;
+}
+
+.history-timeline-era {
+  position: relative;
+  display: grid;
+  grid-template-columns: 10rem repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.25rem;
+  background: rgba(21, 24, 25, 0.82);
+}
+
+.history-timeline-era::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 10.4rem;
+  width: 1px;
+  background: var(--accent);
+  opacity: 0.55;
+}
+
+.history-timeline-period {
+  z-index: 1;
+  align-self: start;
+  margin: 0.2rem 0 0;
+  color: var(--accent-bright);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.history-timeline-entry {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  padding: 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 0.2rem;
+  background: var(--surface-raised);
+}
+
+.history-timeline-entry h3 {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.history-timeline-entry p {
+  margin: 0.65rem 0 0;
+  color: #c9c5bc;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.history-timeline-entry span {
+  display: block;
+  margin-top: 0.65rem;
+  color: var(--accent-bright);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+  .history-timeline-era {
+    grid-template-columns: 1fr;
+    padding-left: 1.25rem;
+  }
+
+  .history-timeline-era::before {
+    top: 1.25rem;
+    bottom: 1.25rem;
+    left: 0.5rem;
+  }
+
+  .history-timeline-period {
+    padding-left: 0.75rem;
+  }
+
+  .history-timeline-entry {
+    margin-left: 0.75rem;
+  }
+}
+
+.mermaid-diagram {
+  width: 100%;
+  margin: 2rem 0;
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 0.25rem;
+  background: rgba(21, 24, 25, 0.82);
+}
+
+.mermaid-diagram svg {
+  display: block;
+  width: 100%;
+  min-width: 36rem;
+  height: auto;
+  margin: 0 auto;
+}
+
+.mermaid-diagram text,
+.mermaid-diagram tspan {
+  fill: #f4efe6 !important;
+}
+
+.mermaid-timeline {
+  padding: 1.25rem;
+  scrollbar-color: var(--accent) var(--surface);
+}
+
+.mermaid-timeline svg {
+  width: 90rem;
+  min-width: 90rem;
+  max-width: none;
+  margin: 0;
+}
+
+.mermaid-timeline text,
+.mermaid-timeline tspan {
+  font-size: 18px !important;
+}
+
+@media (max-width: 640px) {
+  .mermaid-timeline svg {
+    width: 78rem;
+    min-width: 78rem;
+  }
+}
+
 .article-tags {
   display: flex;
   flex-wrap: wrap;
