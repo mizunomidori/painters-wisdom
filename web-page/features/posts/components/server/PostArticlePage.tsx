@@ -1,21 +1,22 @@
 import Link from "next/link";
 import MermaidRenderer from "@/components/MermaidRenderer";
+import { CATEGORIES } from "@/constants";
 import { createPostItem } from "@/lib/markdown";
+import SiteHeader from "@/components/SiteHeader";
 
 export default async function PostArticlePage({ slug }: { slug: string[] }) {
   const postData = await createPostItem(slug);
+  const category = CATEGORIES.find(({ id }) => id === postData.category);
 
   return (
     <div className="site-shell min-h-screen">
-      <header className="site-header">
-        <div className="site-header-inner">
-          <Link href="/" className="brand-mark">Painters&apos; wisdom</Link>
-          <span className="header-note">Field note</span>
-        </div>
-      </header>
+      <SiteHeader activeCategory={category?.id} />
       <main className="article-frame">
         <div className="article-header">
-          <span className="eyebrow">{postData.date}</span>
+          <div className="article-meta">
+            {category && <Link href={`/${category.id}`} className="category-pill">{category.label}</Link>}
+            <span className="eyebrow">{postData.date}</span>
+          </div>
           <h1 className="article-title">{postData.title}</h1>
         </div>
         <MermaidRenderer html={postData.contentHtml} />

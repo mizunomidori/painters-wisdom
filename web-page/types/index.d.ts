@@ -1,9 +1,12 @@
+import type { CategoryId } from "@/constants";
+
 // 記事データ
 export type PostItem = {
     slug: string[];
     title: string;
     date: string;
     tags: string[] | null;
+    category: CategoryId;
     contentHtml: string;
 };
 

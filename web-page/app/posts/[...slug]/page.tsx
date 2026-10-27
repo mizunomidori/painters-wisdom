@@ -17,7 +17,7 @@ export async function generateMetadata(
   const slug = (await params).slug;
   const post = await createPostItem(slug);
   return {
-    title: `${post.title} | Artists' wisdom`,
+    title: `${post.title} | Painters' wisdom`,
   };
 }
 

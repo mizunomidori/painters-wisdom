@@ -1,6 +1,7 @@
 import type { PageData, PostItem } from "@/types";
 import Pagination from "./Pagination";
 import PostCard from "./PostCard";
+import SiteHeader from "./SiteHeader";
 
 const TagSummary = async ({ slug, posts, pageData }: {
   slug: string,
@@ -9,12 +10,7 @@ const TagSummary = async ({ slug, posts, pageData }: {
 }) => {
   return (
     <div className="site-shell w-full">
-      <header className="site-header">
-        <div className="site-header-inner">
-          <span className="brand-mark">Painters&apos; wisdom</span>
-          <span className="header-note">Filtered field notes</span>
-        </div>
-      </header>
+      <SiteHeader />
       <main className="container mx-auto max-w-4xl px-6 py-16">
         <div className="page-intro !py-0">
           <span className="eyebrow">Collection</span>
@@ -23,12 +19,12 @@ const TagSummary = async ({ slug, posts, pageData }: {
         </div>
         <div className="grid grid-cols-1 gap-4">
           {posts.slice(pageData.start, pageData.end).map((post) => (
-            <PostCard key={post.title} post={post} />
+            <PostCard key={post.slug.join("/")} post={post} />
           ))}
         </div>
         <div className="mt-12">
           <Pagination
-            type={`tags/${slug}`}
+            basePath={`/tags/${slug}`}
             pages={pageData.pages}
             currentPage={pageData.currentPage}
           />

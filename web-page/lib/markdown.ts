@@ -12,13 +12,15 @@ import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import matter from 'gray-matter';
 import type { PostItem } from '@/types';
+import { CATEGORIES, getCategoryForDirectory } from '@/constants';
 
-const contentsDirectory = path.join(process.cwd(), '..', 'contents');
+const contentsDirectory = path.join(process.cwd(), '..');
 
 export async function createPostItem(slug: string[]): Promise<PostItem> {
   const filePath = path.join(contentsDirectory, `${slug.join('/')}.md`);
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContents);
+  const category = getCategoryForDirectory(slug[0]);
 
   const processedContent = await unified()
     .use(remarkParse)
@@ -37,23 +39,26 @@ export async function createPostItem(slug: string[]): Promise<PostItem> {
     title: data.title,
     date: data.date,
     tags: data.tags,
+    category: category.id,
     contentHtml: processedContent.value.toString(),
   };
 }
 
 export function getAllPostSlugs() {
-  const getFiles = (dir: string) => {
-    return fs.readdirSync(path.join(contentsDirectory, dir)).map(file => `${dir}/${file}`);
-  };
+  const collectMarkdownFiles = (directory: string): string[] =>
+    fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+      const entryPath = path.join(directory, entry.name);
+      if (entry.isDirectory()) {
+        return collectMarkdownFiles(entryPath);
+      }
+      return entry.isFile() && entry.name.endsWith(".md") ? [entryPath] : [];
+    });
 
-  const columnFiles = getFiles('columns');
-  const paintFiles = getFiles('paints');
-
-  return [...columnFiles, ...paintFiles].map((filePath) => {
-    return {
+  return CATEGORIES.flatMap(({ directory }) =>
+    collectMarkdownFiles(path.join(contentsDirectory, directory)).map((filePath) => ({
       params: {
-        slug: filePath.replace(/\.md$/, '').split('/'),
+        slug: path.relative(contentsDirectory, filePath).replace(/\.md$/, "").split(path.sep),
       },
-    };
-  });
+    })),
+  );
 }

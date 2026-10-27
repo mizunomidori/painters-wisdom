@@ -1,54 +1,50 @@
 import fs from "fs";
 import path from "path";
-import { POSTS_PER_PAGE } from "@/constants";
+import { CATEGORIES, POSTS_PER_PAGE } from "@/constants";
 import type { PageData, PostItem } from "@/types";
 import matter from "gray-matter";
 
-const readSubDirSync = (directoryPath: string) => {
-  const result: string[] = [];
-  const readTopDirSync = ((dirPath: string) => {
-    let items = fs.readdirSync(dirPath);
-    items = items.map((itemName) => {
-      return path.join(dirPath, itemName);
-    });
-    items.forEach((itemPath) => {
-      if (fs.statSync(itemPath).isDirectory()) {
-        //再帰処理
-        readTopDirSync(itemPath);
-      } else {
-        result.push(itemPath);
-      }
-    });
+// Read article files recursively from a category's content directory.
+const readMarkdownFiles = (directoryPath: string): string[] => {
+  return fs.readdirSync(directoryPath, { withFileTypes: true }).flatMap((entry) => {
+    const entryPath = path.join(directoryPath, entry.name);
+    if (entry.isDirectory()) {
+      return readMarkdownFiles(entryPath);
+    }
+    return entry.isFile() && entry.name.endsWith(".md") ? [entryPath] : [];
   });
-
-  readTopDirSync(directoryPath);
-  return result;
 };
 
 // すべてのposts内データを取得
 export const getPostData = async (): Promise<PostItem[]> => {
-  const postsDirectory = path.join(process.cwd(), "..", "contents");
-  const filePaths = readSubDirSync(postsDirectory);
-  const posts = filePaths
-    .map((filePath) => {
+  const contentsDirectory = path.join(process.cwd(), "..");
+  const posts = CATEGORIES.flatMap((category) => {
+    const categoryDirectory = path.join(contentsDirectory, category.directory);
+    return readMarkdownFiles(categoryDirectory).map((filePath) => {
       const fileContents = fs.readFileSync(filePath, "utf-8");
       const { data } = matter(fileContents);
-      const filename = path.relative(postsDirectory, filePath);
+      const slug = path.relative(contentsDirectory, filePath).replace(/\.md$/, "").split(path.sep);
 
       return {
-        slug: filename.replace(/\.md$/, "").split('/'),
+        slug,
         title: data.title,
         date: data.date,
         tags: data.tags || [],
+        category: category.id,
         contentHtml: "",
       };
-    })
-    .sort((postA, postB) =>
-      new Date(postA.date) > new Date(postB.date) ? -1 : 1
-    );
+    });
+  }).sort((postA, postB) =>
+    new Date(postA.date) > new Date(postB.date) ? -1 : 1
+  );
 
   return posts;
 };
+
+export async function getCategoryData(categoryId: string): Promise<PostItem[]> {
+  const posts = await getPostData();
+  return posts.filter((post) => post.category === categoryId);
+}
 
 // タグ一覧ページ用記事データ
 export async function getTagsData(slug: string): Promise<PostItem[]> {

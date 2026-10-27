@@ -3,7 +3,8 @@
 Painters' Wisdom is a quiet, searchable archive of practical notes about
 pigments, painting surfaces, materials, and studio practice.
 
-Articles are Markdown files in `contents/`. The Next.js application in
+Articles are Markdown files in `art_contents/` and `tech_contents/`; their
+directory determines the category. The Next.js application in
 `web-page/` reads them directly and exports the site as static HTML for GitHub
 Pages.
 
@@ -11,7 +12,8 @@ Pages.
 
 ```text
 painters-wisdom/
-├── contents/        Markdown articles grouped by category
+├── art_contents/    Art Markdown articles
+├── tech_contents/   Tech Markdown articles
 ├── web-page/        Next.js application
 └── README.md
 ```
@@ -41,14 +43,19 @@ Run these from `web-page/`:
 
 ## Adding Articles
 
-1. Add a `.md` file under `contents/columns/`, `contents/paints/`, or
-	`contents/supports/`.
+1. Add an unprefixed `.md` file to `art_contents/` or `tech_contents/` to
+   choose the collection.
 2. Include front matter with at least `title` and `date`. Add `tags` when
-	appropriate.
+   appropriate.
 3. Run `npm run build` from `web-page/` to verify the new route.
 
-The article URL follows its path under `contents/`, for example:
-`contents/paints/Example.md` becomes `/posts/paints/Example`.
+Browse collections at `/art` and `/tech`. Article URLs follow the content
+directory, for example `art_contents/Example.md` becomes
+`/posts/art_contents/Example`.
+
+To add another collection, add its ID, display label, content directory, and
+description to `web-page/constants/index.ts`. The collection landing page,
+navigation, and paginated routes are generated from that registry.
 
 ## Deployment
 

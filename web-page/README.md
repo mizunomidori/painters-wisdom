@@ -1,8 +1,8 @@
 # Painters' Wisdom Web App
 
 This directory contains the Next.js frontend for Painters' Wisdom. It uses the
-App Router, Tailwind CSS, and static export. Article source files live one
-directory above this app in `../contents/`.
+App Router, Tailwind CSS, and static export. Article source files live in
+`../art_contents/` and `../tech_contents/`.
 
 ## Getting Started
 
@@ -28,12 +28,15 @@ npm run start    # Serve the production build
 
 ## Content
 
-The app reads Markdown files from `../contents/` during the build. Supported
-content groups are:
+The app reads Markdown files recursively from the category directories during
+the build. The directory determines which category an article appears in:
 
-- `columns/`
-- `paints/`
-- `supports/`
+- `../art_contents/` for Art
+- `../tech_contents/` for Tech
+
+Category navigation and landing pages are generated from the category registry
+in `constants/index.ts`. Each registry entry maps a category to its content
+directory, so add a directory and registry entry to introduce another category.
 
 Each article should provide front matter such as:
 

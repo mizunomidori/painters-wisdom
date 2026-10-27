@@ -1,12 +1,12 @@
 import Link from "next/link";
 
 interface PageProps {
-  type: string;
+  basePath: string;
   pages: number[];
   currentPage?: number;
 }
 
-const Pagination = ({ type, pages, currentPage = 1 }: PageProps) => {
+const Pagination = ({ basePath, pages, currentPage = 1 }: PageProps) => {
   const totalPages = pages.length;
   const pageLimit = 5;
 
@@ -29,7 +29,7 @@ const Pagination = ({ type, pages, currentPage = 1 }: PageProps) => {
       {startPage > 1 && (
         <>
           <li className="page-item">
-            <Link href={`/${type}/1`} className="pagination-link">
+            <Link href={`${basePath}/1`} className="pagination-link">
               1
             </Link>
           </li>
@@ -43,7 +43,7 @@ const Pagination = ({ type, pages, currentPage = 1 }: PageProps) => {
       {paginationRange.map((page) => (
         <li className="page-item" key={page}>
           <Link
-            href={`/${type}/${page}`}
+            href={`${basePath}/${page}`}
             className={`pagination-link ${currentPage === page ? "active" : ""}`}
           >
             {page}
@@ -58,7 +58,7 @@ const Pagination = ({ type, pages, currentPage = 1 }: PageProps) => {
             </li>
           )}
           <li className="page-item">
-            <Link href={`/${type}/${totalPages}`} className="pagination-link">
+            <Link href={`${basePath}/${totalPages}`} className="pagination-link">
               {totalPages}
             </Link>
           </li>
