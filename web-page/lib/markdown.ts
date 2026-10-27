@@ -20,7 +20,7 @@ export async function createPostItem(slug: string[]): Promise<PostItem> {
   const filePath = path.join(contentsDirectory, `${slug.join('/')}.md`);
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContents);
-  const category = getCategoryForDirectory(slug[0]);
+  const category = getCategoryForDirectory(slug[0], data.category);
 
   const processedContent = await unified()
     .use(remarkParse)
@@ -38,6 +38,7 @@ export async function createPostItem(slug: string[]): Promise<PostItem> {
     slug: slug,
     title: data.title,
     date: data.date,
+    summary: data.summary,
     tags: data.tags,
     category: category.id,
     contentHtml: processedContent.value.toString(),

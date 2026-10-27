@@ -18,6 +18,7 @@ export async function generateMetadata(
   const post = await createPostItem(slug);
   return {
     title: `${post.title} | Painters' wisdom`,
+    description: post.summary,
   };
 }
 

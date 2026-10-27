@@ -17,11 +17,16 @@ export const CATEGORIES = [
 
 export type CategoryId = (typeof CATEGORIES)[number]["id"];
 
-export function getCategoryForDirectory(directory: string) {
+export function getCategoryForDirectory(directory: string, declaredCategory?: unknown) {
   const category = CATEGORIES.find(({ directory: categoryDirectory }) => directory === categoryDirectory);
   if (!category) {
     throw new Error(
       `Article directory "${directory}" must match one of: ${CATEGORIES.map(({ directory: categoryDirectory }) => categoryDirectory).join(", ")}`,
+    );
+  }
+  if (declaredCategory !== undefined && declaredCategory !== category.id) {
+    throw new Error(
+      `Article category "${String(declaredCategory)}" does not match its "${directory}" directory`,
     );
   }
   return category;

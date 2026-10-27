@@ -5,6 +5,7 @@ export type PostItem = {
     slug: string[];
     title: string;
     date: string;
+    summary?: string;
     tags: string[] | null;
     category: CategoryId;
     contentHtml: string;

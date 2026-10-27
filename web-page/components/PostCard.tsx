@@ -17,6 +17,7 @@ const PostCard = ({ post }: { post: PostItem }) => {
         </div>
         <div>
           <h2 className="post-card-title font-bold">{post.title}</h2>
+          {post.summary && <p className="post-card-summary">{post.summary}</p>}
           <span className="post-card-date">{post.date}</span>
         </div>
       </div>

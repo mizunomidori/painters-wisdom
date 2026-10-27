@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { CATEGORIES, POSTS_PER_PAGE } from "@/constants";
+import { CATEGORIES, getCategoryForDirectory, POSTS_PER_PAGE } from "@/constants";
 import type { PageData, PostItem } from "@/types";
 import matter from "gray-matter";
 
@@ -24,11 +24,13 @@ export const getPostData = async (): Promise<PostItem[]> => {
       const fileContents = fs.readFileSync(filePath, "utf-8");
       const { data } = matter(fileContents);
       const slug = path.relative(contentsDirectory, filePath).replace(/\.md$/, "").split(path.sep);
+      getCategoryForDirectory(category.directory, data.category);
 
       return {
         slug,
         title: data.title,
         date: data.date,
+        summary: data.summary,
         tags: data.tags || [],
         category: category.id,
         contentHtml: "",

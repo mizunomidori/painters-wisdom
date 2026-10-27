@@ -254,6 +254,13 @@ a {
   letter-spacing: 0.04em;
 }
 
+.post-card-summary {
+  margin: 0.6rem 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
 .pagination-link {
   display: inline-flex;
   min-width: 2.25rem;
