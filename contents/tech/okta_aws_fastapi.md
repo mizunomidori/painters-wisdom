@@ -244,17 +244,3 @@ def read_admin_data(user: UserProfile = Depends(verify_alb_jwt)):
 * [Okta Developer: Configure OpenID Connect Web Application](https://developer.okta.com/docs/guides/sign-into-web-app-redirect/openidconnect/main/)
 * [PyJWT Documentation](https://pyjwt.readthedocs.io/en/stable/)
 ```
-
-```markdown:README.md
-# FastAPI & Okta / AWS ALB Authentication Guide
-
-このリポジトリは、Okta を IdP とし、AWS Application Load Balancer (ALB) の OIDC 認証機能を介して Python (FastAPI) でユーザー情報を受領・検証するためのドキュメントとコードサンプルです。
-
-## ドキュメント一覧
-* `app_proxy_fastapi_cookbook.md`: Microsoft Entra アプリ プロキシ × FastAPI 連携ガイド
-* `okta_aws_fastapi_cookbook.md`: Okta × AWS ALB × FastAPI 連携ガイド
-```
-
-要求された条件（アーキテクチャ選定、設定手順、署名検証機能付きFastAPIサンプルコード、シーケンス図）を盛り込んだ Cookbook (`okta_aws_fastapi_cookbook.md`) を作成いたしました。
-
-構成や実装内容に関して調整や追加のご質問がありましたら、お気軽にお知らせください。

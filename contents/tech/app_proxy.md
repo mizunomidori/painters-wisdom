@@ -175,16 +175,3 @@ curl -X GET "http://localhost:8000/api/me"
 * [Microsoft Learn: Microsoft Entra アプリ プロキシを使用したヘッダー ベースの SSO](https://learn.microsoft.com/ja-jp/entra/identity/app-proxy/application-proxy-configure-single-sign-on-with-headers)
 * [FastAPI Documentation: Header Parameters](https://fastapi.tiangolo.com/tutorial/header-params/)
 ```
-
-```markdown:README.md
-# FastAPI & Microsoft Entra App Proxy SSO クイックスタート
-
-このリポジトリは、Microsoft Entra アプリ プロキシ (Application Proxy) のヘッダー ベース SSO 構成において、Python の FastAPI で認証ヘッダー (UPN 等) を安全に受領・検証するドキュメントとサンプルコードを提供します。
-
-## ファイル構成
-* `app_proxy_fastapi_cookbook.md`: システム構成図 (Mermaid)、ヘッダー仕様、設定手順、FastAPI サンプルコードを含む全般ガイド
-```
-
----
-
-FastAPIでの Entra ID アプリ プロキシ構成手順をまとめました。構成図やヘッダー仕様、`Depends` を活用した実用的なサンプルコードを用意しています。プロジェクトの要件に合わせて適宜ヘッダー名やモデルを修正してご活用ください。
