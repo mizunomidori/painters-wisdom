@@ -17,13 +17,14 @@ const readMarkdownFiles = (directoryPath: string): string[] => {
 
 // すべてのposts内データを取得
 export const getPostData = async (): Promise<PostItem[]> => {
-  const contentsDirectory = path.join(process.cwd(), "..");
+  const contentsDirectory = path.join(process.cwd(), "..", "contents");
   const posts = CATEGORIES.flatMap((category) => {
     const categoryDirectory = path.join(contentsDirectory, category.directory);
     return readMarkdownFiles(categoryDirectory).map((filePath) => {
       const fileContents = fs.readFileSync(filePath, "utf-8");
       const { data } = matter(fileContents);
-      const slug = path.relative(contentsDirectory, filePath).replace(/\.md$/, "").split(path.sep);
+      const relativePath = path.relative(categoryDirectory, filePath);
+      const slug = [category.id, ...relativePath.replace(/\.md$/, "").split(path.sep)];
       getCategoryForDirectory(category.directory, data.category);
 
       return {

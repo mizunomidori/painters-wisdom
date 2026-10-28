@@ -13,7 +13,7 @@ export async function generateMetadata(
   const slug = (await params).slug;
   const tag = decodeURIComponent(slug);
   return {
-    title: `${tag} | Artists' wisdom`,
+    title: `${tag} | Wisdom Archive`,
     description: `${tag}`,
   }
 }

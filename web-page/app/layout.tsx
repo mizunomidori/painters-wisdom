@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Painters' wisdom",
-  description: "A quiet archive of practical wisdom for painters.",
+  title: "Wisdom Archive",
+  description: "A thoughtful archive of practical knowledge across art and technology.",
 };
 
 export default function RootLayout({

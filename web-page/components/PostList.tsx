@@ -20,9 +20,9 @@ const PostList = async ({
       <SiteHeader activeCategory={category?.id} />
       <main className="container mx-auto max-w-6xl px-6 pb-12">
         <div className="page-intro">
-          <span className="eyebrow">{category ? `${category.label} / Field notes` : "All categories / Field notes"}</span>
-          <h1>{category ? `${category.label}, thoughtfully.` : "For the work in front of you."}</h1>
-          <p>{category?.description ?? "Practical knowledge across art, materials, and technology for creative work."}</p>
+          <span className="eyebrow">{category ? `${category.label} / Article index` : "All categories / Article index"}</span>
+          <h1>{category?.brand ?? "Wisdom Archive"}</h1>
+          <p>{category?.description ?? "A growing archive of ideas and practical knowledge across art and technology."}</p>
         </div>
         <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
           {posts.slice(pageData.start, pageData.end).map((post) => (

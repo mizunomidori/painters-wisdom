@@ -2,10 +2,12 @@ import Link from "next/link";
 import { CATEGORIES } from "@/constants";
 
 export default function SiteHeader({ activeCategory }: { activeCategory?: string }) {
+  const activeSection = CATEGORIES.find(({ id }) => id === activeCategory);
+
   return (
     <header className="site-header">
       <div className="site-header-inner">
-        <Link href="/" className="brand-mark">Painters&apos; wisdom</Link>
+        <Link href="/" className="brand-mark">{activeSection?.brand ?? "Wisdom Archive"}</Link>
         <nav className="site-nav" aria-label="Article categories">
           <Link href="/page/1" className="site-nav-link">All</Link>
           {CATEGORIES.map((category) => (
@@ -19,7 +21,7 @@ export default function SiteHeader({ activeCategory }: { activeCategory?: string
             </Link>
           ))}
         </nav>
-        <span className="header-note">An archive of materials &amp; practice</span>
+        <span className="header-note">Art &amp; technology, thoughtfully collected</span>
       </div>
     </header>
   );

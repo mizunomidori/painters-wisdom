@@ -1,9 +1,10 @@
-# Painters' Wisdom
+# Wisdom Archive
 
-Painters' Wisdom is a quiet, searchable archive of practical notes about
-pigments, painting surfaces, materials, and studio practice.
+Wisdom Archive brings together two independently browsable collections:
+Painters' Wisdom for art and studio practice, and Engineers' Wisdom for
+software, technology, and engineering knowledge.
 
-Articles are Markdown files in `art_contents/` and `tech_contents/`; their
+Articles are Markdown files in category directories under `contents/`. Their
 directory determines the category. The Next.js application in
 `web-page/` reads them directly and exports the site as static HTML for GitHub
 Pages.
@@ -12,8 +13,9 @@ Pages.
 
 ```text
 painters-wisdom/
-├── art_contents/    Art Markdown articles
-├── tech_contents/   Tech Markdown articles
+├── contents/
+│   ├── art/          Art Markdown articles
+│   └── tech/         Technology Markdown articles
 ├── web-page/        Next.js application
 └── README.md
 ```
@@ -43,18 +45,17 @@ Run these from `web-page/`:
 
 ## Adding Articles
 
-1. Add an unprefixed `.md` file to `art_contents/` or `tech_contents/` to
-   choose the collection.
+1. Add a Markdown file to `contents/art/` or `contents/tech/` to choose the
+   collection. Filenames do not need category prefixes.
 2. Include front matter with at least `title` and `date`. Add `tags` when
    appropriate.
 3. Run `npm run build` from `web-page/` to verify the new route.
 
-Browse collections at `/art` and `/tech`. Article URLs follow the content
-directory, for example `art_contents/Example.md` becomes
-`/posts/art_contents/Example`.
+Browse collections at `/art` and `/tech`. Article URLs follow the category
+directory, for example `contents/art/Example.md` becomes `/posts/art/Example`.
 
-To add another collection, add its ID, display label, content directory, and
-description to `web-page/constants/index.ts`. The collection landing page,
+To add another collection, add its ID, display label, directory, brand, and
+description to `web-page/constants/index.ts`. Homepage shelves, indexes,
 navigation, and paginated routes are generated from that registry.
 
 ## Deployment

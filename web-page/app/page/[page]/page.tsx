@@ -13,7 +13,7 @@ export async function generateMetadata(
   const page = (await params).page;
   const title = `pp. ${page}`;
   return {
-    title: `${title} | Painters' wisdom`,
+    title: `${title} | Wisdom Archive`,
     description: `${title}`,
   };
 }

@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = CATEGORIES.find(({ id }) => id === categoryId);
 
   return {
-    title: `${category?.label ?? categoryId} · Page ${page} | Painters' wisdom`,
+    title: `${category?.brand ?? categoryId} · Page ${page} | Wisdom Archive`,
     description: category?.description,
   };
 }

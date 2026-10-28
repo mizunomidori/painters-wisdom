@@ -16,7 +16,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { slug, page } = await params;
   const tag = decodeURIComponent(slug);
-  const title = `${tag} - ${page}ページ目 | Nemutai`;
+  const title = `${tag} - ${page}ページ目 | Wisdom Archive`;
   return {
     title: title,
     description: `${tag}`,
