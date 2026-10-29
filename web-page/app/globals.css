@@ -246,6 +246,27 @@ a {
 
 .article-shelf-item .post-card {
   height: 100%;
+  padding: 1rem;
+}
+
+.article-shelf-item .post-card > div:last-child {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.article-shelf-item .post-card-title {
+  display: -webkit-box;
+  margin-top: 0.85rem;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.article-shelf-item .post-card-summary {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .category-visit-link {
