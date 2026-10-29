@@ -2,6 +2,7 @@
 date: "2024-11-02"
 tags: ["paints", "price-lists"]
 title: "Blockx paints"
+summary: "Blockxのエクストラファイン油絵具を、顔料番号・不透明度・価格シリーズとともに一覧できるカタログです。"
 ---
 
 ### Blockx Extra-fine oils ![LastUpdate][badge]

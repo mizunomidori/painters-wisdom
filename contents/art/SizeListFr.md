@@ -2,6 +2,7 @@
 date: "2024-11-03"
 tags: ["supports"]
 title: "Canvas size list [fr]"
+summary: "フランス規格のキャンバス寸法をF（人物）・P（風景）・M（海景）の号数別に一覧し、規格の比率に関する補足もまとめます。"
 ---
 
 ## Standard Canvas Sizes

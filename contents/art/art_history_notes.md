@@ -2,6 +2,7 @@
 date: "2026-09-12"
 tags: ["columns", "art-history"]
 title: "Art history notes: From the Renaissance to Cubism"
+summary: "盛期ルネサンスからキュビスムまでの西洋美術史を年表でたどり、各運動の特徴や影響関係、作品鑑賞の視点を整理します。"
 ---
 
 西洋絵画の主な動きを、16世紀初頭から20世紀初頭までの流れに沿って整理したメモです。

@@ -2,6 +2,7 @@
 date: "2024-11-03"
 tags: ["supports"]
 title: "Canvas size list [jp]"
+summary: "日本規格のキャンバス木枠・パネル寸法を号数別に整理し、F・P・M各型の長辺と短辺を一覧できます。"
 ---
 
 ### キャンバス木枠・パネル 規格サイズ

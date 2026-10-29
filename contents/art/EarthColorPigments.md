@@ -2,6 +2,7 @@
 date: "2024-11-20"
 tags: ["pigments"]
 title: "Pigments: Earth colors"
+summary: "赤・橙・黄・緑・褐色などの土系顔料を色別に整理し、天然・合成酸化鉄の特徴と絵具製品での使用例をまとめます。"
 ---
 
 

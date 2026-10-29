@@ -2,6 +2,7 @@
 date: "2024-11-15"
 tags: ["maniela", "supports"]
 title: "The chalk ground"
+summary: "白亜と兎膠を使った油彩用チョークグラウンドの材料と、パネルの下準備から布貼り・地塗りまでの作り方を紹介します。"
 ---
 
 ### How to Make Chalk Ground for Oil Painting

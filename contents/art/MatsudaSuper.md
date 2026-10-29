@@ -2,6 +2,7 @@
 date: "2024-11-02"
 tags: ["paints", "price-lists"]
 title: "Matsuda Super paints"
+summary: "マツダスーパー油絵具の色名、顔料番号、堅牢性、透明度、価格系列を確認できる色見本・仕様一覧です。"
 ---
 
 ### マツダスーパー油絵具 ![LastUpdate][badge]

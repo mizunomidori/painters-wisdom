@@ -2,6 +2,7 @@
 date: "2024-11-03"
 tags: ["columns"]
 title: "The zorn palatte"
+summary: "イエローオーカー、アイボリーブラック、赤、チタニウムホワイトからなるゾーンパレットの色構成と、限られた色数での混色・調和の考え方を紹介します。"
 ---
 
 ### The Zorn palette

@@ -2,6 +2,7 @@
 date: "2024-11-03"
 tags: ["columns"]
 title: "Acrylic Emulsion"
+summary: "アクリル樹脂やエマルションの仕組みを解説し、樹脂の違いが絵具やメディウムの耐水性・硬度・透明性、併用時の相性に与える影響を整理します。"
 ---
 
 ### REFERENCES

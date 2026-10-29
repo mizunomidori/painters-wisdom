@@ -2,6 +2,7 @@
 date: "2024-11-24"
 tags: ["paints", "price-lists"]
 title: "Winsor & Newton paints"
+summary: "Winsor & Newton Artists' Oil Colourの色ごとの顔料番号、不透明度、耐久性、耐光性、シリーズ、油分などの仕様を一覧します。"
 ---
 
 ### Artists Oil Colour ![LastUpdate][badge]

@@ -2,6 +2,7 @@
 date: "2024-11-10"
 tags: ["columns"]
 title: "The paint pricing"
+summary: "顔料の希少性や原料、給油量、用途が絵具の価格や流通にどう関わるかを解説し、価格だけでは測れない絵具の特性を考察します。"
 ---
 
 ### REFERENCES

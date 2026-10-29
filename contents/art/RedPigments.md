@@ -2,6 +2,7 @@
 date: "2024-11-18"
 tags: ["pigments"]
 title: "Pigments: Red colors"
+summary: "辰砂・バーミリオンやカドミウムレッドなど、歴史的・現代的な赤色顔料の由来、組成、色材としての特徴を紹介します。"
 ---
 
 ## Historical pigments
