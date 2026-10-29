@@ -243,4 +243,3 @@ def read_admin_data(user: UserProfile = Depends(verify_alb_jwt)):
 * [AWS Official: Application Load Balancer を使用してユーザーを認証する](https://docs.aws.amazon.com/ja_jp/elasticloadbalancing/latest/application/listener-authenticate-users.html)
 * [Okta Developer: Configure OpenID Connect Web Application](https://developer.okta.com/docs/guides/sign-into-web-app-redirect/openidconnect/main/)
 * [PyJWT Documentation](https://pyjwt.readthedocs.io/en/stable/)
-```

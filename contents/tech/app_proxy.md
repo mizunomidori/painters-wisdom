@@ -174,4 +174,3 @@ curl -X GET "http://localhost:8000/api/me"
 
 * [Microsoft Learn: Microsoft Entra アプリ プロキシを使用したヘッダー ベースの SSO](https://learn.microsoft.com/ja-jp/entra/identity/app-proxy/application-proxy-configure-single-sign-on-with-headers)
 * [FastAPI Documentation: Header Parameters](https://fastapi.tiangolo.com/tutorial/header-params/)
-```
