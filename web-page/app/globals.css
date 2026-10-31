@@ -509,9 +509,13 @@ a {
 .mermaid-diagram svg {
   display: block;
   width: 100%;
-  min-width: 36rem;
+  min-width: min(36rem, 100%);
   height: auto;
   margin: 0 auto;
+}
+
+.mermaid-vertical svg {
+  min-width: 0;
 }
 
 .mermaid-diagram text,

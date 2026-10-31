@@ -71,7 +71,8 @@ export default function MermaidRenderer({ html }: MermaidRendererProps) {
 
             const diagram = document.createElement("div");
             const diagramType = source.startsWith("timeline") ? "timeline" : "flowchart";
-            diagram.className = `mermaid-diagram mermaid-${diagramType}`;
+            const isVerticalFlowchart = /^(?:flowchart|graph)\s+(?:TB|TD|BT)\b/m.test(source);
+            diagram.className = `mermaid-diagram mermaid-${diagramType}${isVerticalFlowchart ? " mermaid-vertical" : ""}`;
             diagram.setAttribute("role", "img");
             diagram.setAttribute("aria-label", "Mermaid diagram");
             diagram.innerHTML = svg;
