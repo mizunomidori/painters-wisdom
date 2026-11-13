@@ -1,0 +1,301 @@
+---
+date: "2024-11-15"
+tags: ["ground", "emulsion", "oil-painting", "technique"]
+title: "エマルジョン地（半油性地）の作成手順・実践技術ガイド"
+summary: "半油性地の配合・キャンバス処理・乳化・塗布・仕上げまで、実践的な手順と注意点を整理します。"
+---
+
+<style>
+  .emulsion-ground-article {
+    max-width: 60rem;
+    margin: 0 auto;
+    color: #e9e3d6;
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+
+  .emulsion-ground-article h1,
+  .emulsion-ground-article h2,
+  .emulsion-ground-article h3,
+  .emulsion-ground-article h4 {
+    color: var(--foreground);
+    letter-spacing: -0.02em;
+  }
+
+  .emulsion-ground-article h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+  }
+
+  .emulsion-ground-article h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-left: 0.75rem;
+    border-left: 4px solid var(--accent);
+    font-size: clamp(1.5rem, 2vw, 2rem);
+  }
+
+  .emulsion-ground-article h3 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+  }
+
+  .emulsion-ground-article p,
+  .emulsion-ground-article li,
+  .emulsion-ground-article td,
+  .emulsion-ground-article th {
+    color: #d8d3c9;
+  }
+
+  .emulsion-ground-article a {
+    color: var(--accent-bright);
+    text-decoration: underline;
+  }
+
+  .emulsion-ground-article .ref-box {
+    margin: 1.5rem 0 2.5rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: rgba(21, 24, 25, 0.7);
+    border-radius: 0.4rem;
+    color: #d2cec5;
+  }
+
+  .emulsion-ground-article .ref-box strong {
+    color: var(--foreground);
+  }
+
+  .emulsion-ground-article .recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1.25rem;
+    margin: 1.25rem 0 1.5rem;
+  }
+
+  .emulsion-ground-article .recipe-card,
+  .emulsion-ground-article .step-card,
+  .emulsion-ground-article .prop-item {
+    padding: 1.1rem 1.2rem;
+    border: 1px solid var(--line);
+    border-radius: 0.45rem;
+    background: rgba(21, 24, 25, 0.72);
+  }
+
+  .emulsion-ground-article .recipe-card h4 {
+    margin: 0 0 0.75rem;
+    font-size: 1.05rem;
+  }
+
+  .emulsion-ground-article table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .emulsion-ground-article th,
+  .emulsion-ground-article td {
+    padding: 0.7rem 0.8rem;
+    border: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .emulsion-ground-article th {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--foreground);
+  }
+
+  .emulsion-ground-article .timestamp {
+    display: inline-block;
+    margin-left: 0.4rem;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--muted);
+    font-size: 0.68rem;
+    font-family: var(--font-geist-mono), monospace;
+  }
+
+  .emulsion-ground-article .callout-info,
+  .emulsion-ground-article .callout-warn {
+    margin: 1.5rem 0;
+    padding: 1rem 1.2rem;
+    border-left: 4px solid var(--accent);
+    border-radius: 0.25rem;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .emulsion-ground-article .callout-warn {
+    border-left-color: #d18b5f;
+  }
+
+  .emulsion-ground-article .prop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+  }
+
+  .emulsion-ground-article .prop-item strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
+  }
+
+  .emulsion-ground-article footer {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .emulsion-ground-article .recipe-grid,
+    .emulsion-ground-article .prop-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<article class="emulsion-ground-article">
+  <header>
+    <h1>エマルジョン地（半油性地）の作成手順・実践技術ガイド</h1>
+    <div class="ref-box">
+      <strong>参照ソース：</strong><br>
+      1. 動画：<a href="https://www.youtube.com/watch?v=QmJ-MYsgTqI" target="_blank" rel="noopener noreferrer">”A Portrait of Time" Painting process Part3 preparation（小尾修）</a><br>
+      2. 文献：<a href="https://cad-red.com/semi-absorbent-ground/" target="_blank" rel="noopener noreferrer">西洋絵画の画材と技法「半油性地塗り」</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>1. 材料選定と配合処方（レシピ比較）</h2>
+    <p>半油性地は、膠液（水相）の中に乾性油（油相）が微小な粒子として分散したエマルジョン塗料です。目的や手持ちの材料に応じて以下の配合を基準に調整します。</p>
+
+    <div class="recipe-grid">
+      <div class="recipe-card">
+        <h4>処方A：動画ベース（容量比） <span class="timestamp">[04:25]</span></h4>
+        <table>
+          <thead>
+            <tr>
+              <th>材料</th>
+              <th>容量比率</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>前膠液（兎膠1 : 水10 重量比）</td><td>1.00</td></tr>
+            <tr><td>体質顔料（白亜 / Chalk）</td><td>1.70</td></tr>
+            <tr><td>スタンドリンシードオイル</td><td>0.35</td></tr>
+            <tr><td>卵黄（乳化剤）</td><td>適量</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="recipe-card">
+        <h4>処方B：標準重量比（チタン白配合例）</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>材料</th>
+              <th>重量比率（例）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>膠液</td><td>1.5（150g）</td></tr>
+            <tr><td>天然白亜（ムードン）</td><td>1.5（150g）</td></tr>
+            <tr><td>白色顔料（チタニウムホワイト）</td><td>0.5（50g）</td></tr>
+            <tr><td>サンシックンドリンシード油</td><td>0.4〜0.5（50g）</td></tr>
+            <tr><td>卵黄 / 調整用水</td><td>1個 / 0.5（50g）</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="callout-info">
+      <strong>材料選定の重要ポイント：</strong>
+      <ul>
+        <li><strong>白亜（炭酸カルシウム）の選択：</strong> 国内製品の「ムードン」（下地用・仕上げ用）や海外の天然白亜（Chalk / Whiting）を使用します。<strong>沈降性炭酸カルシウム（軽質炭酸カルシウム）は適さない</strong>ため避けてください。</li>
+        <li><strong>隠蔽力（白さ）の調整：</strong> 白亜のみでは油分を含んだ際に半透明になりやすいため、白さを強く出したい場合はチタニウムホワイト等の白色顔料を配合します。古典技法書では白亜と白色顔料を半々にする処方も一般的です。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. キャンバス張りと前膠（Size）の下処理 <span class="timestamp">[00:55 - 04:09]</span></h2>
+    <div class="step-card">
+      <ol>
+        <li><strong>木枠組みとキャンバス張り <span class="timestamp">[00:55 - 02:16]</span>：</strong> 木枠および補強桟を確実に固定し、生麻布をキャンバスプライヤーで均一なテンションをかけながら側面に打ち止めます。</li>
+        <li><strong>前膠の溶解 <span class="timestamp">[02:17 - 03:13]</span>：</strong> 兎膠1：水10（重量比）で十分に水で膨潤させた後、湯煎にかけて完全に溶解させます（※沸騰させると膠の接着力が低下するため厳禁）。</li>
+        <li><strong>前膠の塗布と目節の研磨 <span class="timestamp">[03:14 - 04:09]</span>：</strong> 温かい膠液を刷毛で均一に塗布し、完全乾燥後に単刃剃刀（カミソリ）を滑らせて麻布の毛羽立ちや節を削り落とします。</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. エマルジョン地の乳化調合プロセス <span class="timestamp">[04:20 - 05:43]</span></h2>
+    <div class="step-card">
+      <ol>
+        <li><strong>顔料の投入と馴染ませ（ダマ防止） <span class="timestamp">[04:20 - 04:32]</span>：</strong> ダマが多い顔料はあらかじめ<strong>ふるい</strong>にかけておきます。温かい膠液に顔料を焦らずゆっくり投入して小山を作り、<strong>そのまま2〜3分放置して自然に馴染ませてから</strong>ゆっくり攪拌します（一気に入れると気泡やダマの原因になります）。</li>
+        <li><strong>卵黄の添加 <span class="timestamp">[04:40 - 05:04]</span>：</strong> 塗料が少し冷めたところで卵黄を加えます。キッチンペーパーや手のひらの上で卵黄を転がして白身を完全に取り除き、<strong>表面の粘膜を破って中身だけ</strong>を投入します（粘膜は取り除きます）。</li>
+        <li><strong>【重要】温度を下げてからの乾性油の乳化 <span class="timestamp">[05:12 - 05:26]</span>：</strong> 容器に触れて<strong>「十分にぬるくなった」と感じるまで冷めるのを待ちます</strong>（塗料が熱いうちは油を加えても乳化しにくく分離します）。ハンドミキサーで勢いよく攪拌しながら、乾性油を<strong>細い糸のように少しずつ</strong>垂らして完全に乳化させます。</li>
+        <li><strong>季節に応じた粘度（濃度）の最終調整：</strong> 顔料の粒度（細かい白亜ほど総表面積が増え高粘度になる）や気温によって粘度が変化するため、最後に水を少しずつ加えて塗りやすい濃度に調整します。<strong>油の分離を防ぐため、夏は常温水、冬はぬるま湯を使用</strong>し、熱いお湯は絶対に加えないでください。</li>
+        <li><strong>裏ごし（濾過） <span class="timestamp">[05:28 - 05:43]</span>：</strong> シノワ（メッシュ）で塗料を漉し、微細なダマや気泡を取り除きます。</li>
+      </ol>
+    </div>
+
+    <div class="callout-warn">
+      <strong>温度管理と保管に関する厳守事項：</strong>
+      <ul>
+        <li><strong>作業中の保温：</strong> 室温が低いと膠がゲル化するため、塗料の容器をぬるま湯に浸けて温度を保ちます。ただし<strong>熱いお湯で温めると油が分離して浮き出す</strong>ため、あくまで「人肌〜ぬるま湯」をキープしてください。</li>
+        <li><strong>作り置き・冷蔵保存の禁止：</strong> 卵黄を含む腐敗リスクに加え、一度冷えて固まったものを<strong>再加熱するとエマルジョンが壊れて油が分離</strong>します。必ず1回で使い切る分量を調合し、余った塗料は水性塗料と同様に処理してください。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>4. 塗布・積層と仕上げ処理 <span class="timestamp">[05:44 - 07:06]</span></h2>
+    <div class="step-card">
+      <ol>
+        <li><strong>一層目の塗布とピンホール処理 <span class="timestamp">[05:44 - 07:06]</span>：</strong> 刷毛で全体に塗り広げた後、スクレーパー（ヘラ）で余分な塗料をかき落としつつ布目に押し込みます。布目に「ピンホール（小さな穴）」が残った場合は、<strong>指や手のひらを使って塗料を物理的に押し込んで</strong>埋めます。</li>
+        <li><strong>重ね塗りの層数（支持体による違い）：</strong> 10〜15分程度で指触乾燥したら、刷毛目を交差させるように方向を変えて塗り重ねます。
+          <ul>
+            <li><strong>キャンバス（布）：</strong> 動きのある支持体に厚塗りをするとひび割れの原因になるため、<strong>2〜3層程度</strong>を薄く塗り重ねます。</li>
+            <li><strong>パネル（木板）：</strong> <strong>3〜4層</strong>の積層が可能です。</li>
+          </ul>
+        </li>
+        <li><strong>表面研磨（※水研ぎ厳禁）：</strong> 乾燥後、目の細かいサンドペーパーで表面を平滑に整えます。水性白亜地よりは耐水性がありますが、主成分は膠であるため<strong>水をつけながら耐水ペーパーで磨く（水研ぎ）と溶解してしまいます</strong>。必ず空研ぎを行ってください。</li>
+        <li><strong>養生（乾燥期間）：</strong> 膠自体はすぐに乾きますが、配合された乾性油が完全に酸化重合するまで<strong>念のため数ヶ月間乾燥させてから</strong>描画に使用するのが理想的です。</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>5. 半油性地の特性・メリットと描画上の扱い</h2>
+    <div class="prop-grid">
+      <div class="prop-item">
+        <strong>優れた描画性とインプリマトーラ</strong>
+        吸収性地（白亜地）と非吸収性地（油性地）の中間の性質を持ち、絵具の油分を吸いすぎないため、インプリマトーラ（有色下地）を挟まずに直接油絵具を乗せることができます（もちろんインプリマトーラを施すことも有効です）。
+      </div>
+      <div class="prop-item">
+        <strong>カビ・害虫への高い耐性</strong>
+        膠のみの純粋な水性白亜地と比較し、油分と卵黄が含まれることで湿度の高い日本の気候でも<strong>カビやダニ等の微小害虫が発生しにくい</strong>という実用上の大きな利点があります。
+      </div>
+      <div class="prop-item">
+        <strong>柔軟性と保管時の注意</strong>
+        主バインダーは膠であるため、純粋な油性地ほどの柔軟性はありません。キャンバスを折り曲げたり細い径で巻いたりすると細かな亀裂が入ります（元の平らな状態に戻せば目立たなくなりますが、ロール保管する際は太めの円筒にしてください）。
+      </div>
+      <div class="prop-item">
+        <strong>技法に応じた油分カスタマイズ</strong>
+        油分の比率を減らすことでテンペラ・油彩混合技法やテンペラグラッサへ対応でき、逆に油分を増やすことで時代が下った近代的な油彩表現へと性質をシフトできます（※アクリル絵具の描画には適しません）。
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Canvas &amp; Semi-Absorbent Emulsion Ground Technical Guide | Synthesized from Video &amp; Classical Painting Literature</p>
+  </footer>
+</article>
