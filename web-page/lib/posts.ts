@@ -3,28 +3,17 @@ import path from "path";
 import { CATEGORIES, getCategoryForDirectory, POSTS_PER_PAGE } from "@/constants";
 import type { PageData, PostItem } from "@/types";
 import matter from "gray-matter";
-
-// Read article files recursively from a category's content directory.
-const readMarkdownFiles = (directoryPath: string): string[] => {
-  return fs.readdirSync(directoryPath, { withFileTypes: true }).flatMap((entry) => {
-    const entryPath = path.join(directoryPath, entry.name);
-    if (entry.isDirectory()) {
-      return readMarkdownFiles(entryPath);
-    }
-    return entry.isFile() && entry.name.endsWith(".md") ? [entryPath] : [];
-  });
-};
+import { getArticleSlug, readArticleFiles } from "@/lib/article-files";
 
 // すべてのposts内データを取得
 export const getPostData = async (): Promise<PostItem[]> => {
   const contentsDirectory = path.join(process.cwd(), "..", "contents");
   const posts = CATEGORIES.flatMap((category) => {
     const categoryDirectory = path.join(contentsDirectory, category.directory);
-    return readMarkdownFiles(categoryDirectory).map((filePath) => {
+    return readArticleFiles(categoryDirectory).map((filePath) => {
       const fileContents = fs.readFileSync(filePath, "utf-8");
       const { data } = matter(fileContents);
-      const relativePath = path.relative(categoryDirectory, filePath);
-      const slug = [category.id, ...relativePath.replace(/\.md$/, "").split(path.sep)];
+      const slug = [category.id, ...getArticleSlug(filePath, categoryDirectory)];
       getCategoryForDirectory(category.directory, data.category);
 
       return {

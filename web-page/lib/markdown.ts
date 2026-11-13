@@ -13,6 +13,7 @@ import remarkMath from 'remark-math';
 import matter from 'gray-matter';
 import type { PostItem } from '@/types';
 import { CATEGORIES, getCategoryForDirectory } from '@/constants';
+import { getArticleSlug, readArticleFiles, resolveArticleFile } from '@/lib/article-files';
 
 const contentsDirectory = path.join(process.cwd(), '..', 'contents');
 
@@ -23,7 +24,7 @@ export async function createPostItem(slug: string[]): Promise<PostItem> {
     throw new Error(`Invalid article route: "${slug.join("/")}"`);
   }
   const categoryDirectory = path.join(contentsDirectory, category.directory);
-  const filePath = path.join(categoryDirectory, `${articleSlug.join("/")}.md`);
+  const filePath = resolveArticleFile(categoryDirectory, articleSlug);
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContents);
   getCategoryForDirectory(category.directory, data.category);
@@ -52,19 +53,10 @@ export async function createPostItem(slug: string[]): Promise<PostItem> {
 }
 
 export function getAllPostSlugs() {
-  const collectMarkdownFiles = (directory: string): string[] =>
-    fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
-      const entryPath = path.join(directory, entry.name);
-      if (entry.isDirectory()) {
-        return collectMarkdownFiles(entryPath);
-      }
-      return entry.isFile() && entry.name.endsWith(".md") ? [entryPath] : [];
-    });
-
   return CATEGORIES.flatMap(({ id, directory }) =>
-    collectMarkdownFiles(path.join(contentsDirectory, directory)).map((filePath) => ({
+    readArticleFiles(path.join(contentsDirectory, directory)).map((filePath) => ({
       params: {
-        slug: [id, ...path.relative(path.join(contentsDirectory, directory), filePath).replace(/\.md$/, "").split(path.sep)],
+        slug: [id, ...getArticleSlug(filePath, path.join(contentsDirectory, directory))],
       },
     })),
   );

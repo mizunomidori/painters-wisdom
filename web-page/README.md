@@ -29,8 +29,10 @@ npm run start    # Serve the production build
 
 ## Content
 
-The app reads Markdown files recursively from `../contents/` during the build.
-The directory determines which category an article appears in:
+The app reads `.md` and `.html` files recursively from `../contents/` during
+the build. Markdown articles are rendered as Markdown and HTML articles as
+HTML. Both formats use YAML front matter for article metadata, and the
+directory determines which category an article appears in:
 
 - `../contents/art/` for Art
 - `../contents/tech/` for Tech

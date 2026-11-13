@@ -4,8 +4,8 @@ Wisdom Archive brings together two independently browsable collections:
 Painters' Wisdom for art and studio practice, and Engineers' Wisdom for
 software, technology, and engineering knowledge.
 
-Articles are Markdown files in category directories under `contents/`. Their
-directory determines the category. The Next.js application in
+Articles are Markdown or HTML files in category directories under `contents/`.
+Their directory determines the category. The Next.js application in
 `web-page/` reads them directly and exports the site as static HTML for GitHub
 Pages.
 
@@ -14,8 +14,8 @@ Pages.
 ```text
 painters-wisdom/
 ├── contents/
-│   ├── art/          Art Markdown articles
-│   └── tech/         Technology Markdown articles
+│   ├── art/          Art articles
+│   └── tech/         Technology articles
 ├── web-page/        Next.js application
 └── README.md
 ```
@@ -45,14 +45,16 @@ Run these from `web-page/`:
 
 ## Adding Articles
 
-1. Add a Markdown file to `contents/art/` or `contents/tech/` to choose the
-   collection. Filenames do not need category prefixes.
-2. Include front matter with at least `title` and `date`. Add `tags` when
-   appropriate.
+1. Add a `.md` or `.html` file to `contents/art/` or `contents/tech/` to choose
+   the collection. Filenames do not need category prefixes.
+2. Include YAML front matter with at least `title` and a quoted `date`. Add
+   `tags` when appropriate. HTML article files use the same front matter,
+   followed by HTML content.
 3. Run `npm run build` from `web-page/` to verify the new route.
 
 Browse collections at `/art` and `/tech`. Article URLs follow the category
-directory, for example `contents/art/Example.md` becomes `/posts/art/Example`.
+directory, for example `contents/art/Example.md` or
+`contents/art/Example.html` becomes `/posts/art/Example`.
 
 To add another collection, add its ID, display label, directory, brand, and
 description to `web-page/constants/index.ts`. Homepage shelves, indexes,
