@@ -29,17 +29,20 @@ export async function createPostItem(slug: string[]): Promise<PostItem> {
   const { data, content } = matter(fileContents);
   getCategoryForDirectory(category.directory, data.category);
 
-  const processedContent = await unified()
-    .use(remarkParse)
-    .use(remarkGfm)     // GitHub Flavored Markdownのサポート
-    .use(remarkMath)    // 数式のサポート
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(rehypeKatex)
-    .use(rehypePrism)
-    .use(rehypeExternalLinks, { target: "_blank", rel: ["nofollow"] })
-    .use(rehypeStringify)
-    .process(content);
+  const isHtmlArticle = path.extname(filePath).toLowerCase() === ".html";
+  const contentHtml = isHtmlArticle
+    ? content
+    : (await unified()
+        .use(remarkParse)
+        .use(remarkGfm)     // GitHub Flavored Markdownのサポート
+        .use(remarkMath)    // 数式のサポート
+        .use(remarkRehype, { allowDangerousHtml: true })
+        .use(rehypeRaw)
+        .use(rehypeKatex)
+        .use(rehypePrism)
+        .use(rehypeExternalLinks, { target: "_blank", rel: ["nofollow"] })
+        .use(rehypeStringify)
+        .process(content)).value.toString();
 
   return {
     slug: slug,
@@ -48,7 +51,7 @@ export async function createPostItem(slug: string[]): Promise<PostItem> {
     summary: data.summary,
     tags: data.tags,
     category: category.id,
-    contentHtml: processedContent.value.toString(),
+    contentHtml,
   };
 }
 
