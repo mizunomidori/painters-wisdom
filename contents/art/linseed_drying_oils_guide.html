@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>油彩画用乾性油：Cold PressedとPurifiedの違い、歴史、メーカー比較</title>
+<style>
+  :root {
+    --background: #0d0f10;
+    --foreground: #eee9df;
+    --muted: #9a9d98;
+    --surface: #151819;
+    --surface-raised: #1c2020;
+    --line: rgba(238, 233, 223, 0.12);
+    --accent: #d89a68;
+    --accent-bright: #f0b982;
+    --table-header-bg: rgba(255, 255, 255, 0.04);
+    --table-stripe: rgba(255, 255, 255, 0.02);
+    --callout-bg: rgba(255, 255, 255, 0.025);
+    --shadow-soft: rgba(0, 0, 0, 0.28);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    background: var(--background);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--background);
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    color: var(--foreground);
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+  }
+
+  .article-container {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+  }
+
+  .article-header {
+    max-width: 42rem;
+    margin-bottom: 3.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .category-tag {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    color: var(--accent-bright);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0;
+    color: var(--foreground);
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    overflow-wrap: anywhere;
+  }
+
+  .lead {
+    margin-top: 1rem;
+    color: var(--muted);
+    font-size: 0.98rem;
+  }
+
+  nav.toc {
+    margin: 0 0 2.5rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: rgba(21, 24, 25, 0.7);
+    border-radius: 0.4rem;
+  }
+
+  nav.toc h2 {
+    margin: 0 0 0.6rem;
+    padding: 0;
+    border: none;
+    color: var(--foreground);
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+  }
+
+  nav.toc h2::before {
+    display: none;
+  }
+
+  nav.toc ul {
+    margin: 0;
+    padding-left: 0.2rem;
+    list-style: none;
+  }
+
+  nav.toc li {
+    margin: 0.35rem 0;
+    font-size: 0.95rem;
+  }
+
+  nav.toc a {
+    color: var(--accent-bright);
+    text-decoration: underline;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    margin: 0 0 1rem;
+    padding-left: 0.75rem;
+    border-left: 4px solid var(--accent);
+    color: var(--foreground);
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    margin: 1.5rem 0 0.65rem;
+    color: var(--foreground);
+    font-size: 1.18rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  p,
+  li,
+  td,
+  th {
+    color: #d8d4cc;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  ul,
+  ol {
+    margin: 0.75rem 0 1.15rem 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.45rem;
+  }
+
+  a {
+    color: var(--accent-bright);
+    text-decoration: underline;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+  }
+
+  .comparison-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: 1.25rem 0;
+  }
+
+  .card {
+    padding: 1.2rem 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: 0.45rem;
+    background: rgba(21, 24, 25, 0.72);
+    box-shadow: 0 1px 0 var(--shadow-soft);
+  }
+
+  .card h3 {
+    margin: 0 0 0.8rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--line);
+    color: var(--accent-bright);
+    font-size: 1.08rem;
+  }
+
+  .callout {
+    margin: 1.5rem 0;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 0.25rem;
+    background: var(--callout-bg);
+    color: #d2cec5;
+  }
+
+  .callout strong {
+    color: var(--foreground);
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 1.25rem 0 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: 0.4rem;
+    background: rgba(21, 24, 25, 0.72);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    padding: 0.72rem 0.8rem;
+    border: 1px solid var(--line);
+    vertical-align: top;
+    text-align: left;
+  }
+
+  th {
+    background: var(--table-header-bg);
+    color: var(--foreground);
+    font-weight: 700;
+  }
+
+  tr:nth-child(even) td {
+    background: var(--table-stripe);
+  }
+
+  .badge {
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  .badge-refined {
+    background: rgba(240, 185, 130, 0.12);
+    color: var(--accent-bright);
+  }
+
+  .badge-cold {
+    background: rgba(216, 154, 104, 0.18);
+    color: #f4c38a;
+  }
+
+  .badge-none {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--muted);
+  }
+
+  .usage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+  }
+
+  .usage-item {
+    padding: 1.05rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: 0.45rem;
+    background: rgba(21, 24, 25, 0.72);
+  }
+
+  .usage-item h4 {
+    margin-bottom: 0.5rem;
+    color: var(--accent-bright);
+    font-size: 1.02rem;
+  }
+
+  .article-footer {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  @media (max-width: 720px) {
+    .article-container {
+      padding: 3rem 1.1rem 4rem;
+    }
+
+    .comparison-cards {
+      grid-template-columns: 1fr;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 10vw, 2.6rem);
+    }
+  }
+</style>
+</head>
+<body>
+
+<article class="article-container">
+  <header class="article-header">
+    <span class="category-tag">Materials Note</span>
+    <h1>油彩画用乾性油：Cold PressedとPurifiedの違い、歴史、メーカー比較</h1>
+    <p class="lead">リンシード、ポピー、ウォールナット、サフラワーの製法（Cold Pressed / Purified）の違い、精製の歴史、主要6メーカーのラインアップ比較、および用途別の使い分けについての個人メモ。</p>
+  </header>
+
+  <nav class="toc" aria-label="目次">
+    <h2>目次</h2>
+    <ul>
+      <li><a href="#section-1">1. Cold Pressed（低温圧搾油）とPurified（精製油）の違い</a></li>
+      <li><a href="#section-2">2. 精製方法の歴史</a></li>
+      <li><a href="#section-3">3. 主要6メーカー別・乾性油ラインアップ比較</a></li>
+      <li><a href="#section-4">4. 油種・製法ごとの用途と使い分け</a></li>
+    </ul>
+  </nav>
+
+  <!-- Section 1 -->
+  <section id="section-1">
+    <h2>1. Cold Pressed（低温圧搾油）とPurified（精製油）の違い</h2>
+    <p>画材用のリンシードオイル（亜麻仁油）をはじめとする乾性油には、大きく分けて<strong>「Purified / Refined（精製油）」</strong>と<strong>「Cold Pressed（低温圧搾油）」</strong>の2種類がある。両者の違いは、抽出後の処理工程と、それに伴う不純物（粘液質や遊離脂肪酸）の残存量による。</p>
+
+    <div class="comparison-cards">
+      <div class="card">
+        <h3>Purified / Refined（精製油）</h3>
+        <ul>
+          <li><strong>製法：</strong>圧搾した油から、アルカリ処理や脱色・脱臭などの化学的・物理的精製によって不純物を除去したもの。</li>
+          <li><strong>色調と黄変：</strong>色素が抜かれており、透明に近い淡黄色。白や淡い色調に混ぜても色味を損ないにくい。</li>
+          <li><strong>乾燥と品質：</strong>ロットごとの品質が均一で乾燥速度が予測しやすく、強靭な塗膜を形成する。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Cold Pressed（低温圧搾油）</h3>
+        <ul>
+          <li><strong>製法：</strong>種子に高熱を加えず、機械的な圧力のみで搾り出した未精製（または最小限の濾過のみ）のオイル。</li>
+          <li><strong>色調と黄変：</strong>種子由来の色素が残るため濃い黄金色〜琥珀色。乾燥・酸化が進むにつれて色は抜ける性質がある。</li>
+          <li><strong>顔料との馴染み：</strong>少量の遊離脂肪酸などが残っているため、顔料を濡らす力（湿潤性）が非常に高い。乾燥はやや穏やか。</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>ポピーオイル・ウォールナットオイルの製法事情</h3>
+    <p>リンシード以外の乾性油にも「精製」と「低温圧搾」の両方が存在するが、ボトルに製法が明記されていないことが多いのには各オイルの特性が関係している。</p>
+    <ul>
+      <li><strong>ポピーオイル（ケシ油）：</strong>最大のメリットである「黄変の少なさと透明感」を引き出すため、市販品の<strong>大半は脱色・精製（Refined）</strong>されている（Lefranc &amp; Bourgeoisのポピーオイルなど）。低温圧搾品は顔料専門店や一部メーカーの限定ラインに限られる。</li>
+      <li><strong>ウォールナットオイル（クルミ油）：</strong>クルミは油分を搾りやすく、低温圧搾でも比較的淡い色のオイルが採れるため、ナチュラル志向の海外ブランド（M. GrahamやLangridgeなど）を中心に<strong>コールドプレス製品が多く流通</strong>している。一方で精製タイプも存在する。</li>
+    </ul>
+  </section>
+
+  <!-- Section 2 -->
+  <section id="section-2">
+    <h2>2. 精製方法の歴史</h2>
+    <p>油絵が確立した15世紀（ファン・エイク兄弟の時代）から18世紀頃までの古典絵画の時代においては、現代のような石油系溶剤による抽出や工業的な連続スクリュー圧搾機は存在しない。そのため、<strong>「まずは冷圧（Cold Press）で搾油し、そのあと工房で手作業の『精製』を施す」</strong>のが基本だった。</p>
+
+    <h3>搾油工程：石臼とくさび式圧搾機</h3>
+    <p>古典期は、種子を石臼や水車・風車駆動のスタンプミルで砕き、麻袋や毛織物の布に包んで<strong>くさび式圧搾機（ウェッジプレス）</strong>やネジ式圧搾機で物理的に搾り出していた。特に白や青の顔料に使う最高品質の油を作る際は、熱による着色を避けるため、加熱しない一番搾りの冷圧油（Virgin / Cold Pressed）が選ばれた。</p>
+
+    <h3>アトリエで行われた3つの「伝統的精製」</h3>
+    <p>冷圧で搾ったばかりの生油（Raw oil）には、粘液質（ムシレージ：リン脂質やタンパク質）や水分が多く含まれ、そのままでは乾燥不良や黒ずみ・剥離の原因になる。そのため、チェンニーノ・チェンニーニやテオドール・ド・マイエルヌらの技術書には、冷圧油を画用として精製する多様なレシピが記されている。</p>
+    <ol>
+      <li><strong>水洗い精製（Water-washing）：</strong>冷圧油と水（または塩水・灰汁）を混ぜて激しく振り、静置して分離させる。水溶性の粘液質や遊離脂肪酸が水層へ移動するため、上澄みの油だけを取り出すことで透明で乾きの良い油を得る手法。</li>
+      <li><strong>日光漂白・天日濃縮（Sun-bleaching / Sun-thickening）：</strong>浅い皿やガラス瓶に油と水を入れて太陽光に数週間晒す方法。紫外線で色素が抜けると同時に、酸素を取り込んで適度な粘度と速乾性が生まれる（現在の「サンブリーチド」「サンシックンド」の原型）。</li>
+      <li><strong>加熱処理・乾燥剤の添加（Boiling / Black Oil）：</strong>鉛白（シルバーホワイト）や密陀僧（リサージ）、緑青などの金属系顔料をわずかに加えて加熱することで、不純物を沈殿させつつ乾燥を劇的に早める手法。</li>
+    </ol>
+
+    <div class="callout">
+      <strong>19世紀以降の「現代のRefined」との違い：</strong><br>
+      産業革命以降、チューブ入り絵具の大量生産に伴い、水洗いや天日干しに代わって工場で短時間処理できる<strong>アルカリ精製（苛性ソーダ処理）</strong>や<strong>活性白土による脱色</strong>が主流になった。現代の「Cold Pressed」製品は、こうした化学的精製を経ない古典期の「冷圧段階」に近い操作性を復刻した位置づけにあたる。
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section id="section-3">
+    <h2>3. 主要6メーカー別・乾性油ラインアップ比較</h2>
+    <p>主要6メーカーについて、各社の公式製品ページおよび公式カタログの記載のみを参照し、加工油（スタンドオイル等）を除いた<strong>単体の乾性油（生油）のラインアップと製法表記</strong>を整理。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>メーカー</th>
+            <th>リンシード<br>(Linseed)</th>
+            <th>ポピー<br>(Poppy)</th>
+            <th>ウォールナット<br>(Walnut)</th>
+            <th>サフラワー<br>(Safflower)</th>
+            <th>公式カタログに基づく補足</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Lefranc &amp; Bourgeois</strong><br><small>(公式EUサイト)</small></td>
+            <td><span class="badge badge-refined">あり</span><br>Clarified Linseed Oil</td>
+            <td><span class="badge badge-refined">あり</span><br>Poppy Seed Oil</td>
+            <td><span class="badge badge-none">なし</span></td>
+            <td><span class="badge badge-refined">あり</span><br>Safflower Oil</td>
+            <td>Clarified Linseed Oilは公式に「焙煎亜麻仁から抽出（extracted from roasted linseed）」と記載。ポピーとサフラワーは製法（精製/圧搾）の明記なし。</td>
+          </tr>
+          <tr>
+            <td><strong>クサカベ</strong><br><small>(公式カタログ)</small></td>
+            <td><span class="badge badge-refined">精製油</span><br>リンシードオイル</td>
+            <td><span class="badge badge-refined">精製油</span><br>ポピーオイル</td>
+            <td><span class="badge badge-none">なし</span></td>
+            <td><span class="badge badge-refined">精製油</span><br>サフラワーオイル</td>
+            <td>公式カタログ「基本素材 / 乾性油」に上記3種を掲載。コールドプレス製品の展開はなし。</td>
+          </tr>
+          <tr>
+            <td><strong>ホルベイン</strong><br><small>(公式オンラインショップ)</small></td>
+            <td><span class="badge badge-refined">精製油</span><br>リンシード オイル</td>
+            <td><span class="badge badge-refined">精製油</span><br>ポピー オイル</td>
+            <td><span class="badge badge-none">なし</span></td>
+            <td><span class="badge badge-refined">精製油</span><br>サフラワー オイル</td>
+            <td>公式スペックでいずれも「搾油・精製したもの」「酸価 0.7以下」と明記。サフラワーは画用向けのハイリノール種。</td>
+          </tr>
+          <tr>
+            <td><strong>松田油絵具</strong><br><small>(公式サイト)</small></td>
+            <td><span class="badge badge-refined">精製油（専門家用）</span><br>リンシードオイル<br><small>※スーパーは加工油のみ</small></td>
+            <td><span class="badge badge-refined">精製油（専門家用）</span><br>ポピーオイル<br><small>※スーパーは加工油のみ</small></td>
+            <td><span class="badge badge-none">なし</span></td>
+            <td><span class="badge badge-none">なし</span></td>
+            <td><strong>「マツダスーパー画用液」に無加工の生油はなく</strong>、日光漂白・寒漉し済みの「サンブリーチド」や「ボイルド」「スタンド」のみ展開。通常の精製生油は「専門家用画用液」に分類。</td>
+          </tr>
+          <tr>
+            <td><strong>Winsor &amp; Newton</strong><br><small>(公式サイト)</small></td>
+            <td><span class="badge badge-refined">精製</span> Refined<br><span class="badge badge-cold">低温圧搾</span> Cold-Pressed</td>
+            <td><span class="badge badge-refined">乾燥剤入り</span><br>Drying Poppy Oil</td>
+            <td><span class="badge badge-none">なし</span></td>
+            <td><span class="badge badge-refined">あり</span><br>Safflower Oil</td>
+            <td>6社中で唯一、アルカリ精製（Refined）と非加熱圧搾（Cold-Pressed）の両方を公式明記して展開。ポピーは乾燥促進剤入りのみ。</td>
+          </tr>
+          <tr>
+            <td><strong>Maimeri</strong><br><small>(公式カタログ)</small></td>
+            <td><span class="badge badge-refined">あり</span><br>650 Linseed oil</td>
+            <td><span class="badge badge-refined">あり</span><br>656 Poppy oil</td>
+            <td><span class="badge badge-refined">あり</span><br>654 Walnut oil</td>
+            <td><span class="badge badge-refined">あり</span><br>648 Safflower oil</td>
+            <td>6社で唯一ウォールナットを展開。公式サイト上では、各製品が精製か低温圧搾かの詳細明記なし。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <section id="section-4">
+    <h2>4. 油種・製法ごとの用途と使い分け</h2>
+    <p>制作工程（下描き・中描き・仕上げ）や使用する顔料の色調、自作絵具の練り合わせなど、目的に応じた使い分けの目安。</p>
+
+    <div class="usage-grid">
+      <div class="usage-item">
+        <h4>Purified / Refined リンシード</h4>
+        <p><strong>用途：一般的な描画用メディウム・下層〜中層</strong><br>
+        乾燥が速く塗膜が最も強靭なため、油彩の基本となる溶き油。品質が安定しており、自作メディウムのベースとして幅広く使える。</p>
+      </div>
+      <div class="usage-item">
+        <h4>Cold Pressed リンシード</h4>
+        <p><strong>用途：顔料からの絵具自作・古典技法の再現</strong><br>
+        顔料への湿潤性が極めて高く、粉体と練り合わせる際のバインダーに最適。古典的な操作性を求める場合や、水洗い精製・天日濃縮の原料としても使われる。</p>
+      </div>
+      <div class="usage-item">
+        <h4>ポピーオイル / サフラワーオイル</h4>
+        <p><strong>用途：白・青・淡色の仕上げ・ウェット・オン・ウェット</strong><br>
+        黄変が極めて少ないため、ホワイトやパステル調、空の青などの鮮やかさを保ちたい仕上げ層に適する。乾燥が遅いためじっくり描き込む技法にも向く（塗膜はリンシードより柔らかいため下描きには不向き）。</p>
+      </div>
+      <div class="usage-item">
+        <h4>ウォールナットオイル</h4>
+        <p><strong>用途：全層を通じたバランス重視・白〜中間色</strong><br>
+        リンシードに近い塗膜の強さと乾燥力を持ちながら、リンシードよりも黄変しにくい「中間的な性質」を持つ。1種類の油で全工程をまとめたい場合にも重宝される。</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="article-footer">
+    <p>※各メーカーラインアップ情報は、各社公式カタログおよび公式製品仕様ページ（Lefranc &amp; Bourgeois、クサカベ、ホルベイン、松田油絵具、Winsor &amp; Newton、Maimeri）の記載に基づく。</p>
+  </footer>
+</article>
+
+</body>
+</html>
