@@ -15,7 +15,7 @@ export default async function PostArticlePage({ slug }: { slug: string[] }) {
         <div className="article-header">
           <div className="article-meta">
             {category && <Link href={`/${category.id}`} className="category-pill">{category.label}</Link>}
-            <span className="eyebrow">{postData.date}</span>
+            {postData.date && <span className="eyebrow">{postData.date}</span>}
           </div>
           <h1 className="article-title">{postData.title}</h1>
         </div>
